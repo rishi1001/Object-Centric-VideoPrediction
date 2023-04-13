@@ -1,1 +1,4 @@
 data
+*.yaml
+.ipynb_checkpoints/
+*.mp4
