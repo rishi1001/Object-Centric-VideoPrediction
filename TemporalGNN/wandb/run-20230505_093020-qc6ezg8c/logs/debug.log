@@ -1,0 +1,27 @@
+2023-05-05 09:30:20,626 INFO    MainThread:63945 [wandb_setup.py:_flush():76] Configure stats pid to 63945
+2023-05-05 09:30:20,626 INFO    MainThread:63945 [wandb_setup.py:_flush():76] Loading settings from /home/mincut/.config/wandb/settings
+2023-05-05 09:30:20,626 INFO    MainThread:63945 [wandb_setup.py:_flush():76] Loading settings from /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/settings
+2023-05-05 09:30:20,626 INFO    MainThread:63945 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-05-05 09:30:20,626 INFO    MainThread:63945 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-05-05 09:30:20,626 INFO    MainThread:63945 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'TemporalGNN/main.py', 'program': '/DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/main.py'}
+2023-05-05 09:30:20,627 INFO    MainThread:63945 [wandb_init.py:_log_setup():507] Logging user logs to /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230505_093020-qc6ezg8c/logs/debug.log
+2023-05-05 09:30:20,627 INFO    MainThread:63945 [wandb_init.py:_log_setup():508] Logging internal logs to /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230505_093020-qc6ezg8c/logs/debug-internal.log
+2023-05-05 09:30:20,627 INFO    MainThread:63945 [wandb_init.py:init():547] calling init triggers
+2023-05-05 09:30:20,627 INFO    MainThread:63945 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'lr': 0.005, 'weight_decay': 0.0005, 'hidden_layers': 16, 'normalize': False, 'num_timestamps_in': 12, 'num_timestamps_out': 1, 'batch_size': 1, 'num_epochs': 100}
+2023-05-05 09:30:20,627 INFO    MainThread:63945 [wandb_init.py:init():595] starting backend
+2023-05-05 09:30:20,627 INFO    MainThread:63945 [wandb_init.py:init():599] setting up manager
+2023-05-05 09:30:20,635 INFO    MainThread:63945 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-05-05 09:30:20,638 INFO    MainThread:63945 [wandb_init.py:init():605] backend started and connected
+2023-05-05 09:30:20,641 INFO    MainThread:63945 [wandb_init.py:init():695] updated telemetry
+2023-05-05 09:30:20,646 INFO    MainThread:63945 [wandb_init.py:init():732] communicating run to backend with 60.0 second timeout
+2023-05-05 09:30:21,441 INFO    MainThread:63945 [wandb_run.py:_on_init():2176] communicating current version
+2023-05-05 09:30:21,608 INFO    MainThread:63945 [wandb_run.py:_on_init():2185] got version response upgrade_message: "wandb version 0.15.1 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-05-05 09:30:21,609 INFO    MainThread:63945 [wandb_init.py:init():782] starting run threads in backend
+2023-05-05 09:30:25,664 INFO    MainThread:63945 [wandb_run.py:_console_start():2157] atexit reg
+2023-05-05 09:30:25,664 INFO    MainThread:63945 [wandb_run.py:_redirect():2012] redirect: SettingsConsole.WRAP_RAW
+2023-05-05 09:30:25,665 INFO    MainThread:63945 [wandb_run.py:_redirect():2077] Wrapping output streams.
+2023-05-05 09:30:25,665 INFO    MainThread:63945 [wandb_run.py:_redirect():2102] Redirects installed.
+2023-05-05 09:30:25,666 INFO    MainThread:63945 [wandb_init.py:init():824] run started, returning control to user process
+2023-05-05 09:59:49,890 WARNING MsgRouterThr:63945 [router.py:message_loop():77] message_loop has been closed

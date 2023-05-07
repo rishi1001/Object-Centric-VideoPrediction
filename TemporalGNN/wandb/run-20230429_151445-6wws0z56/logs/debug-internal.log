@@ -1,0 +1,1231 @@
+2023-04-29 15:14:45,344 INFO    StreamThr :3522012 [internal.py:wandb_internal():86] W&B internal server running at pid: 3522012, started at: 2023-04-29 15:14:45.344048
+2023-04-29 15:14:45,346 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status
+2023-04-29 15:14:45,352 INFO    WriterThread:3522012 [datastore.py:open_for_write():85] open: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/run-6wws0z56.wandb
+2023-04-29 15:14:45,353 DEBUG   SenderThread:3522012 [sender.py:send():375] send: header
+2023-04-29 15:14:45,358 DEBUG   SenderThread:3522012 [sender.py:send():375] send: run
+2023-04-29 15:14:46,111 INFO    SenderThread:3522012 [dir_watcher.py:__init__():219] watching files in: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files
+2023-04-29 15:14:46,111 INFO    SenderThread:3522012 [sender.py:_start_run_threads():1124] run started: 6wws0z56 with start time 1682781285.345248
+2023-04-29 15:14:46,111 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:14:46,111 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:14:46,115 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: check_version
+2023-04-29 15:14:46,116 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: check_version
+2023-04-29 15:14:46,217 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: run_start
+2023-04-29 15:14:46,224 DEBUG   HandlerThread:3522012 [system_info.py:__init__():31] System info init
+2023-04-29 15:14:46,225 DEBUG   HandlerThread:3522012 [system_info.py:__init__():46] System info init done
+2023-04-29 15:14:46,225 INFO    HandlerThread:3522012 [system_monitor.py:start():181] Starting system monitor
+2023-04-29 15:14:46,225 INFO    SystemMonitor:3522012 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-04-29 15:14:46,225 INFO    HandlerThread:3522012 [system_monitor.py:probe():201] Collecting system info
+2023-04-29 15:14:46,226 INFO    SystemMonitor:3522012 [interfaces.py:start():190] Started cpu monitoring
+2023-04-29 15:14:46,226 INFO    SystemMonitor:3522012 [interfaces.py:start():190] Started disk monitoring
+2023-04-29 15:14:46,227 INFO    SystemMonitor:3522012 [interfaces.py:start():190] Started gpu monitoring
+2023-04-29 15:14:46,227 INFO    SystemMonitor:3522012 [interfaces.py:start():190] Started memory monitoring
+2023-04-29 15:14:46,228 INFO    SystemMonitor:3522012 [interfaces.py:start():190] Started network monitoring
+2023-04-29 15:14:46,285 DEBUG   HandlerThread:3522012 [system_info.py:probe():195] Probing system
+2023-04-29 15:14:46,287 DEBUG   HandlerThread:3522012 [system_info.py:_probe_git():180] Probing git
+2023-04-29 15:14:46,292 DEBUG   HandlerThread:3522012 [system_info.py:_probe_git():188] Probing git done
+2023-04-29 15:14:46,292 DEBUG   HandlerThread:3522012 [system_info.py:probe():240] Probing system done
+2023-04-29 15:14:46,292 DEBUG   HandlerThread:3522012 [system_monitor.py:probe():210] {'os': 'Linux-5.4.0-81-generic-x86_64-with-glibc2.31', 'python': '3.10.9', 'heartbeatAt': '2023-04-29T15:14:46.285647', 'startedAt': '2023-04-29T15:14:45.330046', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/main.py', 'codePath': 'TemporalGNN/main.py', 'git': {'remote': 'https://github.com/rishi1001/Object-Centric-VideoAnswering.git', 'commit': 'c7214864732f2079b658139d2d16464d4988df25'}, 'email': 'rishi.shah10122001@gmail.com', 'root': '/DATATWO/users/mincut/Object-Centric-VideoAnswering', 'host': 'hulk', 'username': 'mincut', 'executable': '/home/mincut/miniconda3/envs/vidgnn/bin/python', 'cpu_count': 48, 'cpu_count_logical': 96, 'cpu_freq': {'current': 2.932697916666666, 'min': 1200.0, 'max': 4000.0}, 'cpu_freq_per_core': [{'current': 1.398, 'min': 1200.0, 'max': 4000.0}, {'current': 2.774, 'min': 1200.0, 'max': 4000.0}, {'current': 3.699, 'min': 1200.0, 'max': 4000.0}, {'current': 2.565, 'min': 1200.0, 'max': 4000.0}, {'current': 2.744, 'min': 1200.0, 'max': 4000.0}, {'current': 3.699, 'min': 1200.0, 'max': 4000.0}, {'current': 2.842, 'min': 1200.0, 'max': 4000.0}, {'current': 2.686, 'min': 1200.0, 'max': 4000.0}, {'current': 3.0, 'min': 1200.0, 'max': 4000.0}, {'current': 3.699, 'min': 1200.0, 'max': 4000.0}, {'current': 2.514, 'min': 1200.0, 'max': 4000.0}, {'current': 3.001, 'min': 1200.0, 'max': 4000.0}, {'current': 2.804, 'min': 1200.0, 'max': 4000.0}, {'current': 2.083, 'min': 1200.0, 'max': 4000.0}, {'current': 3.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2.846, 'min': 1200.0, 'max': 4000.0}, {'current': 2.791, 'min': 1200.0, 'max': 4000.0}, {'current': 2.894, 'min': 1200.0, 'max': 4000.0}, {'current': 2.975, 'min': 1200.0, 'max': 4000.0}, {'current': 2.512, 'min': 1200.0, 'max': 4000.0}, {'current': 2.814, 'min': 1200.0, 'max': 4000.0}, {'current': 3.0, 'min': 1200.0, 'max': 4000.0}, {'current': 3.698, 'min': 1200.0, 'max': 4000.0}, {'current': 1.35, 'min': 1200.0, 'max': 4000.0}, {'current': 2.064, 'min': 1200.0, 'max': 4000.0}, {'current': 3.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2.289, 'min': 1200.0, 'max': 4000.0}, {'current': 2.837, 'min': 1200.0, 'max': 4000.0}, {'current': 3.698, 'min': 1200.0, 'max': 4000.0}, {'current': 2.471, 'min': 1200.0, 'max': 4000.0}, {'current': 2.261, 'min': 1200.0, 'max': 4000.0}, {'current': 3.699, 'min': 1200.0, 'max': 4000.0}, {'current': 3.697, 'min': 1200.0, 'max': 4000.0}, {'current': 2.813, 'min': 1200.0, 'max': 4000.0}, {'current': 3.001, 'min': 1200.0, 'max': 4000.0}, {'current': 2.767, 'min': 1200.0, 'max': 4000.0}, {'current': 2.742, 'min': 1200.0, 'max': 4000.0}, {'current': 3.706, 'min': 1200.0, 'max': 4000.0}, {'current': 2.039, 'min': 1200.0, 'max': 4000.0}, {'current': 2.175, 'min': 1200.0, 'max': 4000.0}, {'current': 3.697, 'min': 1200.0, 'max': 4000.0}, {'current': 2.524, 'min': 1200.0, 'max': 4000.0}, {'current': 2.074, 'min': 1200.0, 'max': 4000.0}, {'current': 2.72, 'min': 1200.0, 'max': 4000.0}, {'current': 3.001, 'min': 1200.0, 'max': 4000.0}, {'current': 2.241, 'min': 1200.0, 'max': 4000.0}, {'current': 3.697, 'min': 1200.0, 'max': 4000.0}, {'current': 1.701, 'min': 1200.0, 'max': 4000.0}, {'current': 1.298, 'min': 1200.0, 'max': 4000.0}, {'current': 2.222, 'min': 1200.0, 'max': 4000.0}, {'current': 3.7, 'min': 1200.0, 'max': 4000.0}, {'current': 2.307, 'min': 1200.0, 'max': 4000.0}, {'current': 1.759, 'min': 1200.0, 'max': 4000.0}, {'current': 3.694, 'min': 1200.0, 'max': 4000.0}, {'current': 1.986, 'min': 1200.0, 'max': 4000.0}, {'current': 2.024, 'min': 1200.0, 'max': 4000.0}, {'current': 3.0, 'min': 1200.0, 'max': 4000.0}, {'current': 3.645, 'min': 1200.0, 'max': 4000.0}, {'current': 2.17, 'min': 1200.0, 'max': 4000.0}, {'current': 3.0, 'min': 1200.0, 'max': 4000.0}, {'current': 2.439, 'min': 1200.0, 'max': 4000.0}, {'current': 1.663, 'min': 1200.0, 'max': 4000.0}, {'current': 2.392, 'min': 1200.0, 'max': 4000.0}, {'current': 2.488, 'min': 1200.0, 'max': 4000.0}, {'current': 2.337, 'min': 1200.0, 'max': 4000.0}, {'current': 2.331, 'min': 1200.0, 'max': 4000.0}, {'current': 2.347, 'min': 1200.0, 'max': 4000.0}, {'current': 2.879, 'min': 1200.0, 'max': 4000.0}, {'current': 2.47, 'min': 1200.0, 'max': 4000.0}, {'current': 2.39, 'min': 1200.0, 'max': 4000.0}, {'current': 3.656, 'min': 1200.0, 'max': 4000.0}, {'current': 2.067, 'min': 1200.0, 'max': 4000.0}, {'current': 1.805, 'min': 1200.0, 'max': 4000.0}, {'current': 2.064, 'min': 1200.0, 'max': 4000.0}, {'current': 2.751, 'min': 1200.0, 'max': 4000.0}, {'current': 2.0, 'min': 1200.0, 'max': 4000.0}, {'current': 3.679, 'min': 1200.0, 'max': 4000.0}, {'current': 2.455, 'min': 1200.0, 'max': 4000.0}, {'current': 2.514, 'min': 1200.0, 'max': 4000.0}, {'current': 3.679, 'min': 1200.0, 'max': 4000.0}, {'current': 3.635, 'min': 1200.0, 'max': 4000.0}, {'current': 2.429, 'min': 1200.0, 'max': 4000.0}, {'current': 2.044, 'min': 1200.0, 'max': 4000.0}, {'current': 1.775, 'min': 1200.0, 'max': 4000.0}, {'current': 1.673, 'min': 1200.0, 'max': 4000.0}, {'current': 3.677, 'min': 1200.0, 'max': 4000.0}, {'current': 2.899, 'min': 1200.0, 'max': 4000.0}, {'current': 2.002, 'min': 1200.0, 'max': 4000.0}, {'current': 3.6, 'min': 1200.0, 'max': 4000.0}, {'current': 2.468, 'min': 1200.0, 'max': 4000.0}, {'current': 1.687, 'min': 1200.0, 'max': 4000.0}, {'current': 2.997, 'min': 1200.0, 'max': 4000.0}, {'current': 2.028, 'min': 1200.0, 'max': 4000.0}, {'current': 2.111, 'min': 1200.0, 'max': 4000.0}, {'current': 3.675, 'min': 1200.0, 'max': 4000.0}, {'current': 1.7, 'min': 1200.0, 'max': 4000.0}], 'disk': {'total': 225.02332305908203, 'used': 29.10924530029297}, 'gpu': 'A100-PCIE-40GB', 'gpu_count': 4, 'gpu_devices': [{'name': 'A100-PCIE-40GB', 'memory_total': 42505273344}, {'name': 'A100-PCIE-40GB', 'memory_total': 42505273344}, {'name': 'A100-PCIE-40GB', 'memory_total': 42505273344}, {'name': 'A100-PCIE-40GB', 'memory_total': 42505273344}], 'memory': {'total': 503.54884338378906}}
+2023-04-29 15:14:46,292 INFO    HandlerThread:3522012 [system_monitor.py:probe():211] Finished collecting system info
+2023-04-29 15:14:46,292 INFO    HandlerThread:3522012 [system_monitor.py:probe():214] Publishing system info
+2023-04-29 15:14:46,292 DEBUG   HandlerThread:3522012 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-04-29 15:14:46,293 DEBUG   HandlerThread:3522012 [system_info.py:_save_pip():67] Saving pip packages done
+2023-04-29 15:14:46,293 DEBUG   HandlerThread:3522012 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-04-29 15:14:47,113 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_created():278] file/dir created: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/requirements.txt
+2023-04-29 15:14:47,113 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_created():278] file/dir created: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/conda-environment.yaml
+2023-04-29 15:14:47,113 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_created():278] file/dir created: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:14:50,003 DEBUG   HandlerThread:3522012 [system_info.py:_save_conda():86] Saving conda packages done
+2023-04-29 15:14:50,005 INFO    HandlerThread:3522012 [system_monitor.py:probe():216] Finished publishing system info
+2023-04-29 15:14:50,009 DEBUG   SenderThread:3522012 [sender.py:send():375] send: files
+2023-04-29 15:14:50,009 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-04-29 15:14:50,016 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-29 15:14:50,016 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: stop_status
+2023-04-29 15:14:50,112 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/conda-environment.yaml
+2023-04-29 15:14:50,112 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_created():278] file/dir created: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-metadata.json
+2023-04-29 15:14:50,395 DEBUG   SenderThread:3522012 [sender.py:send():375] send: telemetry
+2023-04-29 15:14:50,396 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:14:50,892 INFO    wandb-upload_0:3522012 [upload_job.py:push():137] Uploaded file /tmp/tmpnfeaffb0wandb/5nozwh3a-wandb-metadata.json
+2023-04-29 15:14:51,113 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_created():278] file/dir created: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:14:53,113 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:14:53,409 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:14:53,411 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:14:53,412 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:14:53,412 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:14:53,721 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:14:53,723 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:14:53,723 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:14:53,723 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:14:54,114 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:14:54,114 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:14:54,618 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:14:54,619 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:14:54,620 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:14:54,620 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:14:54,933 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:14:54,935 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:14:54,935 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:14:54,936 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:14:55,114 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:14:55,115 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:14:55,451 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:14:55,585 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:14:55,587 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:14:55,587 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:14:55,588 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:14:55,900 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:14:55,901 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:14:55,902 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:14:55,903 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:14:56,115 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:14:56,115 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:14:56,557 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:14:56,558 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:14:56,559 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:14:56,559 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:14:56,872 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:14:56,874 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:14:56,874 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:14:56,875 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:14:57,115 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:14:57,115 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:14:57,535 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:14:57,536 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:14:57,536 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:14:57,537 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:14:57,848 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:14:57,849 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:14:57,849 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:14:57,850 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:14:58,115 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:14:58,116 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:14:58,502 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:14:58,503 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:14:58,504 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:14:58,504 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:14:58,813 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:14:58,815 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:14:58,815 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:14:58,815 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:14:59,116 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:14:59,116 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:14:59,697 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:14:59,703 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:14:59,703 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:14:59,704 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:00,008 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:00,010 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:00,010 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:00,011 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:00,116 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:00,117 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:00,533 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:15:00,666 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:00,667 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:00,667 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:00,668 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:00,980 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:00,982 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:00,983 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:00,983 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:01,117 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:01,117 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:01,630 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:01,631 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:01,632 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:01,632 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:01,939 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:01,940 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:01,941 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:01,941 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:02,117 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:02,118 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:02,586 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:02,588 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:02,588 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:02,588 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:02,894 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:02,896 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:02,896 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:02,897 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:03,118 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:03,118 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:03,779 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:03,780 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:03,780 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:03,780 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:04,118 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:04,118 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:04,122 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:04,123 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:04,123 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:04,124 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:05,016 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-29 15:15:05,017 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: stop_status
+2023-04-29 15:15:05,118 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:05,119 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:05,221 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:05,338 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:05,338 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:05,339 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:05,534 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:05,535 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:15:05,535 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:05,535 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:05,536 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:06,119 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:06,119 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:06,194 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:06,195 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:06,196 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:06,196 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:06,498 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:06,499 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:06,499 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:06,499 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:07,119 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:07,120 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:07,138 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:07,139 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:07,139 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:07,139 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:07,441 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:07,442 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:07,442 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:07,443 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:08,101 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:08,102 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:08,102 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:08,103 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:08,120 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:08,120 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:08,448 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:08,449 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:08,449 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:08,450 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:09,083 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:09,084 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:09,084 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:09,084 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:09,120 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:09,121 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:09,391 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:09,392 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:09,392 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:09,392 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:10,121 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:10,121 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:10,270 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:10,271 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:10,271 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:10,274 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:10,578 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:10,580 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:10,580 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:15:10,580 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:10,581 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:11,121 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:11,121 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:11,249 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:11,250 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:11,250 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:11,251 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:11,556 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:11,557 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:11,558 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:11,558 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:12,122 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:12,122 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:12,283 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:12,284 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:12,285 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:12,285 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:12,610 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:12,611 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:12,611 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:12,611 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:13,122 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:13,122 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:13,355 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:13,355 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:13,356 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:13,356 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:13,670 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:13,671 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:13,671 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:13,672 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:14,122 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:14,123 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:14,326 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:14,327 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:14,327 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:14,328 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:14,646 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:14,647 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:14,647 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:14,648 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:15,123 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:15,123 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:15,550 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:15,551 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:15,551 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:15,551 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:15,876 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:15,876 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:15:16,123 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:16,124 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:16,288 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:16,288 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:16,288 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:16,566 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:16,567 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:16,567 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:16,567 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:16,873 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:16,874 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:16,874 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:16,875 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:17,124 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/config.yaml
+2023-04-29 15:15:17,124 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:17,124 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:17,598 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:17,600 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:17,600 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:17,600 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:17,911 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:17,912 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:17,912 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:17,913 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:18,125 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:18,125 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:18,572 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:18,573 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:18,573 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:18,573 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:18,884 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:18,886 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:18,886 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:18,886 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:19,125 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:19,125 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:19,540 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:19,541 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:19,542 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:19,542 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:19,854 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:19,855 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:19,855 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:19,856 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:20,019 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-29 15:15:20,020 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: stop_status
+2023-04-29 15:15:20,125 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:20,126 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:20,736 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:20,737 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:20,738 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:20,738 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:21,049 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:21,050 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:21,051 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:21,051 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:21,126 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:21,126 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:21,374 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:15:21,741 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:21,743 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:21,743 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:21,743 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:22,052 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:22,054 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:22,054 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:22,054 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:22,126 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:22,126 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:22,758 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:22,759 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:22,760 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:22,760 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:23,104 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:23,105 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:23,105 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:23,106 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:23,127 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:23,127 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:23,755 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:23,756 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:23,756 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:23,756 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:24,066 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:24,067 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:24,068 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:24,068 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:24,127 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:24,127 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:24,722 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:24,723 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:24,724 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:24,724 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:25,036 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:25,038 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:25,038 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:25,038 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:25,127 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:25,128 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:25,983 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:25,984 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:25,985 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:25,985 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:26,128 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:26,128 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:26,324 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:26,325 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:26,325 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:26,326 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:26,433 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:15:26,927 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:26,928 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:26,928 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:26,928 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:27,128 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:27,129 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:27,283 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:27,284 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:27,284 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:27,285 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:27,936 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:27,937 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:27,937 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:27,938 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:28,129 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:28,129 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:28,243 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:28,244 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:28,245 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:28,246 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:28,902 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:28,903 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:28,904 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:28,904 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:29,129 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:29,130 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:29,226 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:29,227 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:29,227 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:29,227 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:29,938 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:29,939 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:29,940 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:29,940 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:30,130 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:30,130 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:30,259 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:30,261 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:30,261 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:30,261 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:31,103 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:31,104 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:31,104 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:31,105 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:31,130 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:31,130 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:31,412 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:31,413 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:31,414 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:31,414 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:31,520 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:15:32,088 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:32,089 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:32,089 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:32,089 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:32,130 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:32,131 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:32,409 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:32,410 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:32,410 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:32,411 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:33,062 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:33,063 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:33,063 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:33,063 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:33,131 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:33,131 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:33,391 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:33,392 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:33,392 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:33,392 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:34,054 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:34,055 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:34,056 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:34,056 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:34,131 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:34,132 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:34,361 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:34,362 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:34,363 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:34,363 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:35,007 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:35,008 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:35,008 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:35,009 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:35,017 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-29 15:15:35,017 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: stop_status
+2023-04-29 15:15:35,132 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:35,132 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:35,347 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:35,348 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:35,348 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:35,348 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:36,132 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:36,132 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:36,211 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:36,212 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:36,212 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:36,213 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:36,521 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:36,522 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:15:36,522 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:36,522 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:36,523 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:37,133 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:37,133 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:37,194 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:37,195 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:37,195 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:37,195 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:37,509 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:37,510 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:37,510 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:37,511 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:38,133 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:38,133 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:38,191 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:38,192 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:38,192 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:38,193 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:38,505 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:38,506 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:38,506 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:38,506 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:39,133 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:39,134 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:39,156 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:39,157 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:39,157 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:39,157 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:39,462 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:39,463 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:39,463 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:39,463 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:40,110 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:40,111 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:40,111 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:40,112 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:40,134 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:40,134 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:40,425 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:40,425 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:40,425 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:40,426 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:41,134 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:41,135 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:41,312 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:41,313 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:41,313 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:41,314 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:41,702 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:41,704 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:15:41,704 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:41,704 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:41,704 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:42,135 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:42,135 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:42,373 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:42,374 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:42,374 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:42,375 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:42,681 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:42,682 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:42,683 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:42,683 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:43,135 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:43,135 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:43,365 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:43,366 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:43,366 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:43,366 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:43,740 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:43,741 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:43,741 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:43,742 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:44,135 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:44,136 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:44,552 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:44,553 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:44,553 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:44,553 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:44,864 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:44,866 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:44,866 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:44,867 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:45,136 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:45,136 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:45,473 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:45,474 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:45,474 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:45,475 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:45,783 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:45,784 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:45,785 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:45,785 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:46,136 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:46,136 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:46,228 DEBUG   SystemMonitor:3522012 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-04-29 15:15:46,232 DEBUG   SenderThread:3522012 [sender.py:send():375] send: stats
+2023-04-29 15:15:46,675 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:46,676 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:46,676 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:46,677 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:46,982 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:46,983 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:15:46,984 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:46,984 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:46,984 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:47,137 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:47,137 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:47,650 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:47,651 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:47,651 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:47,652 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:48,001 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:48,002 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:48,002 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:48,003 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:48,137 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:48,137 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:48,676 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:48,677 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:48,678 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:48,678 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:48,999 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:49,000 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:49,000 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:49,001 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:49,138 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:49,138 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:49,660 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:49,661 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:49,661 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:49,662 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:49,974 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:49,976 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:49,976 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:49,976 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:50,017 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-29 15:15:50,017 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: stop_status
+2023-04-29 15:15:50,138 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:50,138 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:50,616 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:50,617 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:50,618 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:50,618 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:50,939 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:50,940 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:50,940 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:50,940 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:51,139 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:51,139 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:51,821 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:51,823 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:51,823 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:51,823 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:52,133 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:52,134 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:15:52,135 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:52,135 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:52,136 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:52,139 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:52,139 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:52,819 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:52,820 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:52,820 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:52,820 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:53,127 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:53,129 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:53,129 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:53,129 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:53,139 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:53,139 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:53,763 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:53,764 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:53,765 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:53,765 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:54,075 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:54,076 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:54,076 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:54,077 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:54,140 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:54,140 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:54,733 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:54,734 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:54,735 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:54,735 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:55,043 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:55,045 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:55,045 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:55,046 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:55,140 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:55,140 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:55,750 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:55,751 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:55,751 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:55,752 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:56,093 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:56,094 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:56,094 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:56,095 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:56,140 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:56,141 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:56,997 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:56,998 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:56,998 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:56,998 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:57,141 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:57,141 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:57,307 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:57,308 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:15:57,309 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:57,309 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:57,309 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:57,959 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:57,960 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:57,960 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:57,960 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:58,141 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:58,142 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:58,266 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:58,267 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:58,267 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:58,268 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:58,911 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:58,911 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:58,912 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:58,912 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:59,142 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:15:59,142 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:15:59,219 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:59,220 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:59,220 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:59,221 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:15:59,863 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:15:59,864 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:15:59,864 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:15:59,864 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:00,142 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:00,142 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:00,169 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:00,171 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:00,171 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:00,172 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:00,806 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:00,807 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:00,807 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:00,807 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:01,115 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:01,116 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:01,116 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:01,117 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:01,143 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:01,143 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:02,056 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:02,058 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:02,058 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:02,058 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:02,143 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:02,143 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:02,362 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:02,364 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:16:02,364 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:02,365 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:02,365 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:03,064 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:03,065 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:03,065 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:03,066 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:03,147 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:03,147 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:03,381 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:03,382 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:03,382 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:03,383 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:04,033 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:04,034 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:04,034 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:04,035 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:04,147 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:04,148 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:04,347 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:04,349 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:04,349 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:04,349 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:05,017 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-29 15:16:05,018 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: stop_status
+2023-04-29 15:16:05,051 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:05,148 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:05,148 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:05,332 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:05,332 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:05,333 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:05,368 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:05,369 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:05,370 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:05,370 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:06,048 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:06,049 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:06,049 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:06,049 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:06,148 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:06,149 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:06,369 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:06,370 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:06,370 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:06,371 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:07,149 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:07,149 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:07,250 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:07,251 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:07,251 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:07,251 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:07,557 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:07,559 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:16:07,559 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:07,559 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:07,560 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:08,149 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:08,149 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:08,214 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:08,215 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:08,216 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:08,216 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:08,525 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:08,526 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:08,527 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:08,527 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:09,149 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:09,150 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:09,201 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:09,202 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:09,202 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:09,202 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:09,530 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:09,531 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:09,532 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:09,532 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:10,150 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:10,150 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:10,222 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:10,223 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:10,223 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:10,224 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:10,550 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:10,551 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:10,552 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:10,552 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:11,150 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:11,151 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:11,191 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:11,197 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:11,198 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:11,199 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:11,501 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:11,502 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:11,502 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:11,503 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:12,151 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:12,151 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:12,399 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:12,400 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:12,400 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:12,401 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:12,751 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:12,752 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:16:12,753 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:12,753 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:12,753 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:13,151 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:13,151 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:13,412 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:13,412 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:13,413 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:13,413 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:13,737 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:13,738 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:13,738 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:13,738 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:14,152 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:14,152 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:14,444 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:14,445 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:14,445 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:14,446 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:14,777 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:14,778 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:14,778 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:14,778 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:15,152 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:15,152 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:15,434 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:15,435 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:15,435 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:15,436 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:15,791 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:15,792 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:15,792 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:15,793 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:16,152 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:16,153 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:16,240 DEBUG   SenderThread:3522012 [sender.py:send():375] send: stats
+2023-04-29 15:16:16,441 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:16,443 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:16,444 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:16,444 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:16,748 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:16,750 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:16,751 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:16,751 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:17,153 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:17,153 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:17,692 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:17,694 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:17,694 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:17,695 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:18,048 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:18,050 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:16:18,050 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:18,051 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:18,052 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:18,153 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:18,153 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:18,705 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:18,707 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:18,707 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:18,708 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:19,014 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:19,016 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:19,016 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:19,017 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:19,154 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:19,154 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:19,659 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:19,661 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:19,661 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:19,662 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:20,006 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:20,008 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:20,008 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:20,010 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:20,017 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-29 15:16:20,018 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: stop_status
+2023-04-29 15:16:20,154 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:20,154 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:20,658 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:20,659 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:20,660 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:20,660 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:20,961 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:20,962 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:20,963 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:20,963 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:21,155 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:21,155 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:21,600 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:21,601 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:21,601 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:21,602 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:21,904 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:21,905 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:21,905 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:21,906 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:22,155 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:22,155 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:22,989 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:22,990 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:22,990 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:22,991 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:23,155 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:23,156 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:23,300 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:23,301 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:16:23,302 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:23,302 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:23,302 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:24,004 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:24,005 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:24,005 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:24,006 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:24,156 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:24,156 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:24,365 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:24,366 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:24,367 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:24,367 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:24,986 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:24,987 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:24,987 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:24,988 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:25,156 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:25,156 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:25,298 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:25,299 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:25,299 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:25,299 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:25,949 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:25,950 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:25,950 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:25,950 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:26,157 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:26,157 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:26,260 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:26,261 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:26,261 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:26,262 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:27,026 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:27,027 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:27,027 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:27,028 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:27,157 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:27,157 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:27,382 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:27,384 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:27,384 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:27,384 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:28,157 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:28,158 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:28,287 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:28,288 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:28,288 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:28,288 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:28,607 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:28,607 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:16:28,608 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:28,608 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:28,608 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:29,158 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:29,158 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:29,268 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:29,269 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:29,269 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:29,269 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:29,578 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:29,579 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:29,579 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:29,580 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:30,158 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:30,159 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:30,231 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:30,232 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:30,233 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:30,233 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:30,546 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:30,547 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:30,547 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:30,547 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:31,159 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:31,159 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:31,223 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:31,224 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:31,224 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:31,225 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:31,578 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:31,579 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:31,580 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:31,580 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:32,159 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:32,159 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:32,231 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:32,232 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:32,232 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:32,232 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:32,537 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:32,538 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:32,538 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:32,538 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:33,160 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:33,160 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:33,412 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:33,413 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:33,413 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:33,414 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:33,720 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:33,721 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:16:33,721 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:33,722 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:33,722 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:34,160 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:34,160 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:34,418 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:34,419 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:34,419 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:34,419 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:34,734 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:34,734 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:34,735 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:34,735 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:35,018 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-29 15:16:35,018 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: stop_status
+2023-04-29 15:16:35,160 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:35,161 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:35,427 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:35,428 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:35,428 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:35,429 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:35,763 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:35,765 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:35,765 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:35,765 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:36,161 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:36,161 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:36,415 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:36,417 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:36,417 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:36,417 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:36,728 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:36,729 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:36,729 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:36,730 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:37,161 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-29 15:16:37,163 DEBUG   SenderThread:3522012 [sender.py:send():375] send: history
+2023-04-29 15:16:37,163 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: summary_record
+2023-04-29 15:16:37,165 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:37,165 DEBUG   SenderThread:3522012 [sender.py:send():375] send: exit
+2023-04-29 15:16:37,165 INFO    SenderThread:3522012 [sender.py:send_exit():598] handling exit code: 0
+2023-04-29 15:16:37,166 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:37,166 INFO    SenderThread:3522012 [sender.py:send_exit():600] handling runtime: 110
+2023-04-29 15:16:37,166 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:37,167 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:37,167 INFO    SenderThread:3522012 [sender.py:send_exit():606] send defer
+2023-04-29 15:16:37,167 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: defer
+2023-04-29 15:16:37,167 INFO    HandlerThread:3522012 [handler.py:handle_request_defer():170] handle defer: 0
+2023-04-29 15:16:37,167 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: defer
+2023-04-29 15:16:37,167 INFO    SenderThread:3522012 [sender.py:send_request_defer():622] handle sender defer: 0
+2023-04-29 15:16:37,167 INFO    SenderThread:3522012 [sender.py:transition_state():626] send defer: 1
+2023-04-29 15:16:37,167 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: defer
+2023-04-29 15:16:37,167 INFO    HandlerThread:3522012 [handler.py:handle_request_defer():170] handle defer: 1
+2023-04-29 15:16:37,168 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: defer
+2023-04-29 15:16:37,168 INFO    SenderThread:3522012 [sender.py:send_request_defer():622] handle sender defer: 1
+2023-04-29 15:16:37,168 INFO    SenderThread:3522012 [sender.py:transition_state():626] send defer: 2
+2023-04-29 15:16:37,168 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: defer
+2023-04-29 15:16:37,168 INFO    HandlerThread:3522012 [handler.py:handle_request_defer():170] handle defer: 2
+2023-04-29 15:16:37,168 INFO    HandlerThread:3522012 [system_monitor.py:finish():190] Stopping system monitor
+2023-04-29 15:16:37,168 DEBUG   SystemMonitor:3522012 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-04-29 15:16:37,169 INFO    HandlerThread:3522012 [interfaces.py:finish():202] Joined cpu monitor
+2023-04-29 15:16:37,169 DEBUG   SystemMonitor:3522012 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-04-29 15:16:37,169 INFO    HandlerThread:3522012 [interfaces.py:finish():202] Joined disk monitor
+2023-04-29 15:16:38,061 INFO    HandlerThread:3522012 [interfaces.py:finish():202] Joined gpu monitor
+2023-04-29 15:16:38,062 INFO    HandlerThread:3522012 [interfaces.py:finish():202] Joined memory monitor
+2023-04-29 15:16:38,062 INFO    HandlerThread:3522012 [interfaces.py:finish():202] Joined network monitor
+2023-04-29 15:16:38,063 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: defer
+2023-04-29 15:16:38,063 INFO    SenderThread:3522012 [sender.py:send_request_defer():622] handle sender defer: 2
+2023-04-29 15:16:38,063 INFO    SenderThread:3522012 [sender.py:transition_state():626] send defer: 3
+2023-04-29 15:16:38,063 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: defer
+2023-04-29 15:16:38,063 INFO    HandlerThread:3522012 [handler.py:handle_request_defer():170] handle defer: 3
+2023-04-29 15:16:38,064 DEBUG   SenderThread:3522012 [sender.py:send():375] send: stats
+2023-04-29 15:16:38,065 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: defer
+2023-04-29 15:16:38,065 INFO    SenderThread:3522012 [sender.py:send_request_defer():622] handle sender defer: 3
+2023-04-29 15:16:38,065 INFO    SenderThread:3522012 [sender.py:transition_state():626] send defer: 4
+2023-04-29 15:16:38,065 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: defer
+2023-04-29 15:16:38,065 INFO    HandlerThread:3522012 [handler.py:handle_request_defer():170] handle defer: 4
+2023-04-29 15:16:38,065 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: defer
+2023-04-29 15:16:38,065 INFO    SenderThread:3522012 [sender.py:send_request_defer():622] handle sender defer: 4
+2023-04-29 15:16:38,066 INFO    SenderThread:3522012 [sender.py:transition_state():626] send defer: 5
+2023-04-29 15:16:38,066 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: defer
+2023-04-29 15:16:38,066 INFO    HandlerThread:3522012 [handler.py:handle_request_defer():170] handle defer: 5
+2023-04-29 15:16:38,066 DEBUG   SenderThread:3522012 [sender.py:send():375] send: summary
+2023-04-29 15:16:38,066 INFO    SenderThread:3522012 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-29 15:16:38,067 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: defer
+2023-04-29 15:16:38,067 INFO    SenderThread:3522012 [sender.py:send_request_defer():622] handle sender defer: 5
+2023-04-29 15:16:38,067 INFO    SenderThread:3522012 [sender.py:transition_state():626] send defer: 6
+2023-04-29 15:16:38,067 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: defer
+2023-04-29 15:16:38,067 INFO    HandlerThread:3522012 [handler.py:handle_request_defer():170] handle defer: 6
+2023-04-29 15:16:38,067 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: defer
+2023-04-29 15:16:38,067 INFO    SenderThread:3522012 [sender.py:send_request_defer():622] handle sender defer: 6
+2023-04-29 15:16:38,067 INFO    SenderThread:3522012 [sender.py:transition_state():626] send defer: 7
+2023-04-29 15:16:38,067 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:16:38,068 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: defer
+2023-04-29 15:16:38,068 INFO    HandlerThread:3522012 [handler.py:handle_request_defer():170] handle defer: 7
+2023-04-29 15:16:38,068 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: defer
+2023-04-29 15:16:38,068 INFO    SenderThread:3522012 [sender.py:send_request_defer():622] handle sender defer: 7
+2023-04-29 15:16:38,166 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: poll_exit
+2023-04-29 15:16:38,166 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:38,167 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:39,167 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:39,887 INFO    SenderThread:3522012 [sender.py:transition_state():626] send defer: 8
+2023-04-29 15:16:39,887 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: poll_exit
+2023-04-29 15:16:39,888 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: defer
+2023-04-29 15:16:39,888 INFO    HandlerThread:3522012 [handler.py:handle_request_defer():170] handle defer: 8
+2023-04-29 15:16:39,888 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: defer
+2023-04-29 15:16:39,889 INFO    SenderThread:3522012 [sender.py:send_request_defer():622] handle sender defer: 8
+2023-04-29 15:16:39,894 INFO    SenderThread:3522012 [sender.py:transition_state():626] send defer: 9
+2023-04-29 15:16:39,894 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: defer
+2023-04-29 15:16:39,895 DEBUG   SenderThread:3522012 [sender.py:send():375] send: artifact
+2023-04-29 15:16:39,895 INFO    HandlerThread:3522012 [handler.py:handle_request_defer():170] handle defer: 9
+2023-04-29 15:16:40,167 INFO    Thread-12 :3522012 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:41,584 INFO    SenderThread:3522012 [sender.py:send_artifact():1474] sent artifact job-https___github.com_rishi1001_Object-Centric-VideoAnswering.git_TemporalGNN_main.py - {'id': 'QXJ0aWZhY3Q6NDM2ODM1MDQ5', 'digest': '1e13c9e26c7c8090e6ca7f62c2730f3a', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_rishi1001_Object-Centric-VideoAnswering.git_TemporalGNN_main.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_rishi1001_Object-Centric-VideoAnswering.git_TemporalGNN_main.py', 'alias': 'v0'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjY1NDQ4MzU0', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NDM2ODM1MDQ5', 'versionIndex': 0}}, 'version': 'v0'}
+2023-04-29 15:16:41,585 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: defer
+2023-04-29 15:16:41,585 INFO    SenderThread:3522012 [sender.py:send_request_defer():622] handle sender defer: 9
+2023-04-29 15:16:41,585 INFO    SenderThread:3522012 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-04-29 15:16:42,168 INFO    SenderThread:3522012 [dir_watcher.py:finish():395] scan: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files
+2023-04-29 15:16:42,168 INFO    SenderThread:3522012 [dir_watcher.py:finish():409] scan save: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/config.yaml config.yaml
+2023-04-29 15:16:42,169 INFO    SenderThread:3522012 [dir_watcher.py:finish():409] scan save: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log output.log
+2023-04-29 15:16:42,169 INFO    SenderThread:3522012 [dir_watcher.py:finish():409] scan save: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/requirements.txt requirements.txt
+2023-04-29 15:16:42,173 INFO    SenderThread:3522012 [dir_watcher.py:finish():409] scan save: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-metadata.json wandb-metadata.json
+2023-04-29 15:16:42,176 INFO    SenderThread:3522012 [dir_watcher.py:finish():409] scan save: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/conda-environment.yaml conda-environment.yaml
+2023-04-29 15:16:42,176 INFO    SenderThread:3522012 [dir_watcher.py:finish():409] scan save: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json wandb-summary.json
+2023-04-29 15:16:42,180 INFO    SenderThread:3522012 [sender.py:transition_state():626] send defer: 10
+2023-04-29 15:16:42,183 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: defer
+2023-04-29 15:16:42,185 INFO    HandlerThread:3522012 [handler.py:handle_request_defer():170] handle defer: 10
+2023-04-29 15:16:42,186 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: defer
+2023-04-29 15:16:42,186 INFO    SenderThread:3522012 [sender.py:send_request_defer():622] handle sender defer: 10
+2023-04-29 15:16:42,186 INFO    SenderThread:3522012 [file_pusher.py:finish():168] shutting down file pusher
+2023-04-29 15:16:42,933 INFO    wandb-upload_0:3522012 [upload_job.py:push():137] Uploaded file /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/config.yaml
+2023-04-29 15:16:43,118 INFO    wandb-upload_2:3522012 [upload_job.py:push():137] Uploaded file /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/requirements.txt
+2023-04-29 15:16:43,129 INFO    wandb-upload_1:3522012 [upload_job.py:push():137] Uploaded file /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/output.log
+2023-04-29 15:16:43,168 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-29 15:16:43,206 INFO    wandb-upload_4:3522012 [upload_job.py:push():137] Uploaded file /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/wandb-summary.json
+2023-04-29 15:16:43,209 INFO    wandb-upload_3:3522012 [upload_job.py:push():137] Uploaded file /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/files/conda-environment.yaml
+2023-04-29 15:16:43,410 INFO    Thread-11 (_thread_body):3522012 [sender.py:transition_state():626] send defer: 11
+2023-04-29 15:16:43,410 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: defer
+2023-04-29 15:16:43,411 INFO    HandlerThread:3522012 [handler.py:handle_request_defer():170] handle defer: 11
+2023-04-29 15:16:43,411 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: defer
+2023-04-29 15:16:43,411 INFO    SenderThread:3522012 [sender.py:send_request_defer():622] handle sender defer: 11
+2023-04-29 15:16:43,411 INFO    SenderThread:3522012 [file_pusher.py:join():173] waiting for file pusher
+2023-04-29 15:16:43,411 INFO    SenderThread:3522012 [sender.py:transition_state():626] send defer: 12
+2023-04-29 15:16:43,411 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: defer
+2023-04-29 15:16:43,411 INFO    HandlerThread:3522012 [handler.py:handle_request_defer():170] handle defer: 12
+2023-04-29 15:16:43,412 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: defer
+2023-04-29 15:16:43,412 INFO    SenderThread:3522012 [sender.py:send_request_defer():622] handle sender defer: 12
+2023-04-29 15:16:45,759 INFO    SenderThread:3522012 [sender.py:transition_state():626] send defer: 13
+2023-04-29 15:16:45,759 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: defer
+2023-04-29 15:16:45,759 INFO    HandlerThread:3522012 [handler.py:handle_request_defer():170] handle defer: 13
+2023-04-29 15:16:45,760 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: status_report
+2023-04-29 15:16:45,760 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: defer
+2023-04-29 15:16:45,760 INFO    SenderThread:3522012 [sender.py:send_request_defer():622] handle sender defer: 13
+2023-04-29 15:16:45,760 INFO    SenderThread:3522012 [sender.py:transition_state():626] send defer: 14
+2023-04-29 15:16:45,760 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: defer
+2023-04-29 15:16:45,760 DEBUG   SenderThread:3522012 [sender.py:send():375] send: final
+2023-04-29 15:16:45,761 INFO    HandlerThread:3522012 [handler.py:handle_request_defer():170] handle defer: 14
+2023-04-29 15:16:45,761 DEBUG   SenderThread:3522012 [sender.py:send():375] send: footer
+2023-04-29 15:16:45,761 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: defer
+2023-04-29 15:16:45,761 INFO    SenderThread:3522012 [sender.py:send_request_defer():622] handle sender defer: 14
+2023-04-29 15:16:45,762 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: poll_exit
+2023-04-29 15:16:45,762 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: poll_exit
+2023-04-29 15:16:45,762 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: server_info
+2023-04-29 15:16:45,763 DEBUG   SenderThread:3522012 [sender.py:send_request():402] send_request: server_info
+2023-04-29 15:16:45,765 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: get_summary
+2023-04-29 15:16:45,766 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: sampled_history
+2023-04-29 15:16:46,076 INFO    MainThread:3522012 [wandb_run.py:_footer_history_summary_info():3476] rendering history
+2023-04-29 15:16:46,077 INFO    MainThread:3522012 [wandb_run.py:_footer_history_summary_info():3508] rendering summary
+2023-04-29 15:16:46,077 INFO    MainThread:3522012 [wandb_run.py:_footer_sync_info():3434] logging synced files
+2023-04-29 15:16:46,078 DEBUG   HandlerThread:3522012 [handler.py:handle_request():144] handle_request: shutdown
+2023-04-29 15:16:46,078 INFO    HandlerThread:3522012 [handler.py:finish():845] shutting down handler
+2023-04-29 15:16:46,763 INFO    WriterThread:3522012 [datastore.py:close():298] close: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230429_151445-6wws0z56/run-6wws0z56.wandb
+2023-04-29 15:16:47,076 INFO    SenderThread:3522012 [sender.py:finish():1550] shutting down sender
+2023-04-29 15:16:47,076 INFO    SenderThread:3522012 [file_pusher.py:finish():168] shutting down file pusher
+2023-04-29 15:16:47,076 INFO    SenderThread:3522012 [file_pusher.py:join():173] waiting for file pusher

@@ -1,0 +1,23 @@
+Total data points:  223
+Total data points:  32
+Total data points:  205
+  0%|                                                                                                   | 0/223 [00:00<?, ?it/s]
+Start Training
+> /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/model.py(26)forward()
+  0%|                                                                                                   | 0/223 [00:34<?, ?it/s]
+Traceback (most recent call last):
+  File "/DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/main.py", line 182, in <module>
+    train(epoch,plot=plot)
+  File "/DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/main.py", line 102, in train
+    out = model(data.x, data.edge_index)
+  File "/home/mincut/miniconda3/envs/vidgnn/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/model.py", line 26, in forward
+    output = []
+  File "/DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/model.py", line 26, in forward
+    output = []
+  File "/home/mincut/miniconda3/envs/vidgnn/lib/python3.10/bdb.py", line 90, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/home/mincut/miniconda3/envs/vidgnn/lib/python3.10/bdb.py", line 115, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit

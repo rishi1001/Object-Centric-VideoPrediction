@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/main.py", line 69, in <module>
+    dataset_train = VideoDataset(train_folder, num_timesteps_in=num_timestamps_in, num_timesteps_out=num_timestamps_out, num_features=num_features)
+  File "/DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/dataset.py", line 60, in __init__
+    if data.shape[1] < self.num_features*(self.num_timesteps_in+self.num_timesteps_out):
+  File "/home/mincut/miniconda3/envs/vidgnn/lib/python3.10/site-packages/torch_geometric/data/dataset.py", line 124, in num_features
+    return self.num_node_features
+  File "/home/mincut/miniconda3/envs/vidgnn/lib/python3.10/site-packages/torch_geometric/data/dataset.py", line 110, in num_node_features
+    data = self[0]
+  File "/DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/dataset.py", line 78, in __getitem__
+    x = self.data_points_x[idx]
+IndexError: list index out of range

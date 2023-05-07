@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/main.py", line 69, in <module>
+    dataset_train = VideoDataset(train_folder, num_timesteps_in=num_timestamps_in, num_timesteps_out=num_timestamps_out, num_features=num_features)
+  File "/DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/dataset.py", line 47, in __init__
+    self.num_features = num_features
+AttributeError: can't set attribute 'num_features'

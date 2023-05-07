@@ -1,0 +1,183 @@
+2023-05-07 12:13:53,191 INFO    StreamThr :516709 [internal.py:wandb_internal():86] W&B internal server running at pid: 516709, started at: 2023-05-07 12:13:53.190287
+2023-05-07 12:13:53,193 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: status
+2023-05-07 12:13:53,195 INFO    WriterThread:516709 [datastore.py:open_for_write():85] open: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/run-g5vp8arz.wandb
+2023-05-07 12:13:53,200 DEBUG   SenderThread:516709 [sender.py:send():375] send: header
+2023-05-07 12:13:53,201 DEBUG   SenderThread:516709 [sender.py:send():375] send: run
+2023-05-07 12:13:53,969 INFO    SenderThread:516709 [dir_watcher.py:__init__():219] watching files in: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files
+2023-05-07 12:13:53,969 INFO    SenderThread:516709 [sender.py:_start_run_threads():1124] run started: g5vp8arz with start time 1683461633.188597
+2023-05-07 12:13:53,970 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: summary_record
+2023-05-07 12:13:53,970 INFO    SenderThread:516709 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-07 12:13:53,975 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: check_version
+2023-05-07 12:13:53,975 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: check_version
+2023-05-07 12:13:54,086 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: run_start
+2023-05-07 12:13:54,093 DEBUG   HandlerThread:516709 [system_info.py:__init__():31] System info init
+2023-05-07 12:13:54,093 DEBUG   HandlerThread:516709 [system_info.py:__init__():46] System info init done
+2023-05-07 12:13:54,093 INFO    HandlerThread:516709 [system_monitor.py:start():181] Starting system monitor
+2023-05-07 12:13:54,094 INFO    SystemMonitor:516709 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-05-07 12:13:54,094 INFO    HandlerThread:516709 [system_monitor.py:probe():201] Collecting system info
+2023-05-07 12:13:54,095 INFO    SystemMonitor:516709 [interfaces.py:start():190] Started cpu monitoring
+2023-05-07 12:13:54,096 INFO    SystemMonitor:516709 [interfaces.py:start():190] Started disk monitoring
+2023-05-07 12:13:54,097 INFO    SystemMonitor:516709 [interfaces.py:start():190] Started gpu monitoring
+2023-05-07 12:13:54,098 INFO    SystemMonitor:516709 [interfaces.py:start():190] Started memory monitoring
+2023-05-07 12:13:54,100 INFO    SystemMonitor:516709 [interfaces.py:start():190] Started network monitoring
+2023-05-07 12:13:54,154 DEBUG   HandlerThread:516709 [system_info.py:probe():195] Probing system
+2023-05-07 12:13:54,156 DEBUG   HandlerThread:516709 [system_info.py:_probe_git():180] Probing git
+2023-05-07 12:13:54,163 DEBUG   HandlerThread:516709 [system_info.py:_probe_git():188] Probing git done
+2023-05-07 12:13:54,163 DEBUG   HandlerThread:516709 [system_info.py:probe():240] Probing system done
+2023-05-07 12:13:54,163 DEBUG   HandlerThread:516709 [system_monitor.py:probe():210] {'os': 'Linux-5.4.0-81-generic-x86_64-with-glibc2.31', 'python': '3.10.9', 'heartbeatAt': '2023-05-07T12:13:54.154690', 'startedAt': '2023-05-07T12:13:53.175627', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/main.py', 'codePath': 'TemporalGNN/main.py', 'git': {'remote': 'https://github.com/rishi1001/Object-Centric-VideoAnswering.git', 'commit': 'c7214864732f2079b658139d2d16464d4988df25'}, 'email': 'rishi.shah10122001@gmail.com', 'root': '/DATATWO/users/mincut/Object-Centric-VideoAnswering', 'host': 'hulk', 'username': 'mincut', 'executable': '/home/mincut/miniconda3/envs/vidgnn/bin/python', 'cpu_count': 48, 'cpu_count_logical': 96, 'cpu_freq': {'current': 1.578833333333333, 'min': 1200.0, 'max': 4000.0}, 'cpu_freq_per_core': [{'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.201, 'min': 1200.0, 'max': 4000.0}, {'current': 1.354, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 3.695, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.286, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 3.733, 'min': 1200.0, 'max': 4000.0}, {'current': 3.701, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.29, 'min': 1200.0, 'max': 4000.0}, {'current': 3.698, 'min': 1200.0, 'max': 4000.0}, {'current': 1.331, 'min': 1200.0, 'max': 4000.0}, {'current': 1.201, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 2.605, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 3.702, 'min': 1200.0, 'max': 4000.0}, {'current': 1.274, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 2.234, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.201, 'min': 1200.0, 'max': 4000.0}, {'current': 1.201, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.305, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 3.661, 'min': 1200.0, 'max': 4000.0}, {'current': 1.659, 'min': 1200.0, 'max': 4000.0}, {'current': 1.201, 'min': 1200.0, 'max': 4000.0}, {'current': 1.295, 'min': 1200.0, 'max': 4000.0}, {'current': 1.201, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.201, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.549, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 3.73, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.289, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 3.704, 'min': 1200.0, 'max': 4000.0}, {'current': 3.729, 'min': 1200.0, 'max': 4000.0}, {'current': 1.201, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.268, 'min': 1200.0, 'max': 4000.0}, {'current': 3.695, 'min': 1200.0, 'max': 4000.0}, {'current': 1.469, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 2.766, 'min': 1200.0, 'max': 4000.0}, {'current': 1.201, 'min': 1200.0, 'max': 4000.0}, {'current': 3.695, 'min': 1200.0, 'max': 4000.0}, {'current': 1.282, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.589, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 1.306, 'min': 1200.0, 'max': 4000.0}, {'current': 1.2, 'min': 1200.0, 'max': 4000.0}, {'current': 3.695, 'min': 1200.0, 'max': 4000.0}, {'current': 1.653, 'min': 1200.0, 'max': 4000.0}], 'disk': {'total': 225.02332305908203, 'used': 29.117664337158203}, 'gpu': 'A100-PCIE-40GB', 'gpu_count': 4, 'gpu_devices': [{'name': 'A100-PCIE-40GB', 'memory_total': 42505273344}, {'name': 'A100-PCIE-40GB', 'memory_total': 42505273344}, {'name': 'A100-PCIE-40GB', 'memory_total': 42505273344}, {'name': 'A100-PCIE-40GB', 'memory_total': 42505273344}], 'memory': {'total': 503.54884338378906}}
+2023-05-07 12:13:54,163 INFO    HandlerThread:516709 [system_monitor.py:probe():211] Finished collecting system info
+2023-05-07 12:13:54,163 INFO    HandlerThread:516709 [system_monitor.py:probe():214] Publishing system info
+2023-05-07 12:13:54,164 DEBUG   HandlerThread:516709 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-05-07 12:13:54,164 DEBUG   HandlerThread:516709 [system_info.py:_save_pip():67] Saving pip packages done
+2023-05-07 12:13:54,164 DEBUG   HandlerThread:516709 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-05-07 12:13:54,973 INFO    Thread-12 :516709 [dir_watcher.py:_on_file_created():278] file/dir created: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/wandb-summary.json
+2023-05-07 12:13:54,974 INFO    Thread-12 :516709 [dir_watcher.py:_on_file_created():278] file/dir created: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/conda-environment.yaml
+2023-05-07 12:13:54,974 INFO    Thread-12 :516709 [dir_watcher.py:_on_file_created():278] file/dir created: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/requirements.txt
+2023-05-07 12:13:57,770 DEBUG   HandlerThread:516709 [system_info.py:_save_conda():86] Saving conda packages done
+2023-05-07 12:13:57,772 INFO    HandlerThread:516709 [system_monitor.py:probe():216] Finished publishing system info
+2023-05-07 12:13:57,776 DEBUG   SenderThread:516709 [sender.py:send():375] send: files
+2023-05-07 12:13:57,776 INFO    SenderThread:516709 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-05-07 12:13:57,785 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-07 12:13:57,786 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: stop_status
+2023-05-07 12:13:57,974 INFO    Thread-12 :516709 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/conda-environment.yaml
+2023-05-07 12:13:57,974 INFO    Thread-12 :516709 [dir_watcher.py:_on_file_created():278] file/dir created: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/wandb-metadata.json
+2023-05-07 12:13:58,169 DEBUG   SenderThread:516709 [sender.py:send():375] send: telemetry
+2023-05-07 12:13:58,171 DEBUG   SenderThread:516709 [sender.py:send():375] send: exit
+2023-05-07 12:13:58,171 INFO    SenderThread:516709 [sender.py:send_exit():598] handling exit code: 1
+2023-05-07 12:13:58,171 INFO    SenderThread:516709 [sender.py:send_exit():600] handling runtime: 3
+2023-05-07 12:13:58,174 INFO    SenderThread:516709 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-07 12:13:58,174 INFO    SenderThread:516709 [sender.py:send_exit():606] send defer
+2023-05-07 12:13:58,175 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: defer
+2023-05-07 12:13:58,175 INFO    HandlerThread:516709 [handler.py:handle_request_defer():170] handle defer: 0
+2023-05-07 12:13:58,176 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: defer
+2023-05-07 12:13:58,176 INFO    SenderThread:516709 [sender.py:send_request_defer():622] handle sender defer: 0
+2023-05-07 12:13:58,176 INFO    SenderThread:516709 [sender.py:transition_state():626] send defer: 1
+2023-05-07 12:13:58,176 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: defer
+2023-05-07 12:13:58,176 INFO    HandlerThread:516709 [handler.py:handle_request_defer():170] handle defer: 1
+2023-05-07 12:13:58,176 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: defer
+2023-05-07 12:13:58,177 INFO    SenderThread:516709 [sender.py:send_request_defer():622] handle sender defer: 1
+2023-05-07 12:13:58,177 INFO    SenderThread:516709 [sender.py:transition_state():626] send defer: 2
+2023-05-07 12:13:58,177 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: defer
+2023-05-07 12:13:58,177 INFO    HandlerThread:516709 [handler.py:handle_request_defer():170] handle defer: 2
+2023-05-07 12:13:58,177 INFO    HandlerThread:516709 [system_monitor.py:finish():190] Stopping system monitor
+2023-05-07 12:13:58,177 DEBUG   SystemMonitor:516709 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-05-07 12:13:58,178 DEBUG   SystemMonitor:516709 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-05-07 12:13:58,178 INFO    HandlerThread:516709 [interfaces.py:finish():202] Joined cpu monitor
+2023-05-07 12:13:58,178 DEBUG   SystemMonitor:516709 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-05-07 12:13:58,179 INFO    HandlerThread:516709 [interfaces.py:finish():202] Joined disk monitor
+2023-05-07 12:13:58,708 INFO    wandb-upload_0:516709 [upload_job.py:push():137] Uploaded file /tmp/tmp72d3_6zrwandb/frao6lu8-wandb-metadata.json
+2023-05-07 12:13:58,975 INFO    Thread-12 :516709 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/wandb-summary.json
+2023-05-07 12:13:58,975 INFO    Thread-12 :516709 [dir_watcher.py:_on_file_created():278] file/dir created: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/output.log
+2023-05-07 12:13:59,027 INFO    HandlerThread:516709 [interfaces.py:finish():202] Joined gpu monitor
+2023-05-07 12:13:59,028 INFO    HandlerThread:516709 [interfaces.py:finish():202] Joined memory monitor
+2023-05-07 12:13:59,028 INFO    HandlerThread:516709 [interfaces.py:finish():202] Joined network monitor
+2023-05-07 12:13:59,028 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-07 12:13:59,029 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: defer
+2023-05-07 12:13:59,030 INFO    SenderThread:516709 [sender.py:send_request_defer():622] handle sender defer: 2
+2023-05-07 12:13:59,030 INFO    SenderThread:516709 [sender.py:transition_state():626] send defer: 3
+2023-05-07 12:13:59,030 DEBUG   SenderThread:516709 [sender.py:send():375] send: stats
+2023-05-07 12:13:59,030 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: defer
+2023-05-07 12:13:59,032 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: poll_exit
+2023-05-07 12:13:59,032 INFO    HandlerThread:516709 [handler.py:handle_request_defer():170] handle defer: 3
+2023-05-07 12:13:59,033 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: status_report
+2023-05-07 12:13:59,033 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: defer
+2023-05-07 12:13:59,033 INFO    SenderThread:516709 [sender.py:send_request_defer():622] handle sender defer: 3
+2023-05-07 12:13:59,033 INFO    SenderThread:516709 [sender.py:transition_state():626] send defer: 4
+2023-05-07 12:13:59,034 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: defer
+2023-05-07 12:13:59,034 INFO    HandlerThread:516709 [handler.py:handle_request_defer():170] handle defer: 4
+2023-05-07 12:13:59,034 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: defer
+2023-05-07 12:13:59,034 INFO    SenderThread:516709 [sender.py:send_request_defer():622] handle sender defer: 4
+2023-05-07 12:13:59,034 INFO    SenderThread:516709 [sender.py:transition_state():626] send defer: 5
+2023-05-07 12:13:59,034 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: defer
+2023-05-07 12:13:59,034 INFO    HandlerThread:516709 [handler.py:handle_request_defer():170] handle defer: 5
+2023-05-07 12:13:59,035 DEBUG   SenderThread:516709 [sender.py:send():375] send: summary
+2023-05-07 12:13:59,035 INFO    SenderThread:516709 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-07 12:13:59,036 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: defer
+2023-05-07 12:13:59,036 INFO    SenderThread:516709 [sender.py:send_request_defer():622] handle sender defer: 5
+2023-05-07 12:13:59,036 INFO    SenderThread:516709 [sender.py:transition_state():626] send defer: 6
+2023-05-07 12:13:59,036 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: defer
+2023-05-07 12:13:59,036 INFO    HandlerThread:516709 [handler.py:handle_request_defer():170] handle defer: 6
+2023-05-07 12:13:59,037 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: defer
+2023-05-07 12:13:59,037 INFO    SenderThread:516709 [sender.py:send_request_defer():622] handle sender defer: 6
+2023-05-07 12:13:59,042 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: status_report
+2023-05-07 12:13:59,417 INFO    SenderThread:516709 [sender.py:transition_state():626] send defer: 7
+2023-05-07 12:13:59,417 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: defer
+2023-05-07 12:13:59,418 INFO    HandlerThread:516709 [handler.py:handle_request_defer():170] handle defer: 7
+2023-05-07 12:13:59,418 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: defer
+2023-05-07 12:13:59,418 INFO    SenderThread:516709 [sender.py:send_request_defer():622] handle sender defer: 7
+2023-05-07 12:13:59,797 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-07 12:13:59,975 INFO    Thread-12 :516709 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/config.yaml
+2023-05-07 12:13:59,976 INFO    Thread-12 :516709 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/wandb-summary.json
+2023-05-07 12:14:00,179 INFO    SenderThread:516709 [sender.py:transition_state():626] send defer: 8
+2023-05-07 12:14:00,180 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: poll_exit
+2023-05-07 12:14:00,180 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: defer
+2023-05-07 12:14:00,181 INFO    HandlerThread:516709 [handler.py:handle_request_defer():170] handle defer: 8
+2023-05-07 12:14:00,181 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: defer
+2023-05-07 12:14:00,181 INFO    SenderThread:516709 [sender.py:send_request_defer():622] handle sender defer: 8
+2023-05-07 12:14:00,186 INFO    SenderThread:516709 [sender.py:transition_state():626] send defer: 9
+2023-05-07 12:14:00,187 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: defer
+2023-05-07 12:14:00,187 INFO    HandlerThread:516709 [handler.py:handle_request_defer():170] handle defer: 9
+2023-05-07 12:14:00,187 DEBUG   SenderThread:516709 [sender.py:send():375] send: artifact
+2023-05-07 12:14:00,807 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-07 12:14:00,976 INFO    Thread-12 :516709 [dir_watcher.py:_on_file_modified():295] file/dir modified: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/output.log
+2023-05-07 12:14:01,825 INFO    SenderThread:516709 [sender.py:send_artifact():1474] sent artifact job-https___github.com_rishi1001_Object-Centric-VideoAnswering.git_TemporalGNN_main.py - {'id': 'QXJ0aWZhY3Q6NDQ1MzU2MjYz', 'digest': '749a60ead528b66325aabf99c8066ecb', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_rishi1001_Object-Centric-VideoAnswering.git_TemporalGNN_main.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_rishi1001_Object-Centric-VideoAnswering.git_TemporalGNN_main.py', 'alias': 'v2'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjY1NDQ4MzU0', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NDQ1MzU2MjYz', 'versionIndex': 2}}, 'version': 'v2'}
+2023-05-07 12:14:01,825 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: defer
+2023-05-07 12:14:01,825 INFO    SenderThread:516709 [sender.py:send_request_defer():622] handle sender defer: 9
+2023-05-07 12:14:01,825 INFO    SenderThread:516709 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-05-07 12:14:01,977 INFO    SenderThread:516709 [dir_watcher.py:finish():395] scan: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files
+2023-05-07 12:14:01,977 INFO    SenderThread:516709 [dir_watcher.py:finish():409] scan save: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/config.yaml config.yaml
+2023-05-07 12:14:01,978 INFO    SenderThread:516709 [dir_watcher.py:finish():409] scan save: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/output.log output.log
+2023-05-07 12:14:01,978 INFO    SenderThread:516709 [dir_watcher.py:finish():409] scan save: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/requirements.txt requirements.txt
+2023-05-07 12:14:01,982 INFO    SenderThread:516709 [dir_watcher.py:finish():409] scan save: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/wandb-metadata.json wandb-metadata.json
+2023-05-07 12:14:01,986 INFO    SenderThread:516709 [dir_watcher.py:finish():409] scan save: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/conda-environment.yaml conda-environment.yaml
+2023-05-07 12:14:01,992 INFO    SenderThread:516709 [dir_watcher.py:finish():409] scan save: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/wandb-summary.json wandb-summary.json
+2023-05-07 12:14:01,993 INFO    SenderThread:516709 [sender.py:transition_state():626] send defer: 10
+2023-05-07 12:14:01,993 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: poll_exit
+2023-05-07 12:14:02,002 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: defer
+2023-05-07 12:14:02,003 INFO    HandlerThread:516709 [handler.py:handle_request_defer():170] handle defer: 10
+2023-05-07 12:14:02,004 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: defer
+2023-05-07 12:14:02,004 INFO    SenderThread:516709 [sender.py:send_request_defer():622] handle sender defer: 10
+2023-05-07 12:14:02,005 INFO    SenderThread:516709 [file_pusher.py:finish():168] shutting down file pusher
+2023-05-07 12:14:02,770 INFO    wandb-upload_1:516709 [upload_job.py:push():137] Uploaded file /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/output.log
+2023-05-07 12:14:02,852 INFO    wandb-upload_0:516709 [upload_job.py:push():137] Uploaded file /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/config.yaml
+2023-05-07 12:14:02,895 INFO    wandb-upload_4:516709 [upload_job.py:push():137] Uploaded file /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/wandb-summary.json
+2023-05-07 12:14:02,909 INFO    wandb-upload_3:516709 [upload_job.py:push():137] Uploaded file /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/conda-environment.yaml
+2023-05-07 12:14:02,940 INFO    wandb-upload_2:516709 [upload_job.py:push():137] Uploaded file /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/files/requirements.txt
+2023-05-07 12:14:03,140 INFO    Thread-11 (_thread_body):516709 [sender.py:transition_state():626] send defer: 11
+2023-05-07 12:14:03,141 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: defer
+2023-05-07 12:14:03,141 INFO    HandlerThread:516709 [handler.py:handle_request_defer():170] handle defer: 11
+2023-05-07 12:14:03,142 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: defer
+2023-05-07 12:14:03,142 INFO    SenderThread:516709 [sender.py:send_request_defer():622] handle sender defer: 11
+2023-05-07 12:14:03,142 INFO    SenderThread:516709 [file_pusher.py:join():173] waiting for file pusher
+2023-05-07 12:14:03,143 INFO    SenderThread:516709 [sender.py:transition_state():626] send defer: 12
+2023-05-07 12:14:03,143 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: defer
+2023-05-07 12:14:03,143 INFO    HandlerThread:516709 [handler.py:handle_request_defer():170] handle defer: 12
+2023-05-07 12:14:03,143 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: defer
+2023-05-07 12:14:03,143 INFO    SenderThread:516709 [sender.py:send_request_defer():622] handle sender defer: 12
+2023-05-07 12:14:03,476 INFO    SenderThread:516709 [sender.py:transition_state():626] send defer: 13
+2023-05-07 12:14:03,476 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: defer
+2023-05-07 12:14:03,476 INFO    HandlerThread:516709 [handler.py:handle_request_defer():170] handle defer: 13
+2023-05-07 12:14:03,477 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: defer
+2023-05-07 12:14:03,477 INFO    SenderThread:516709 [sender.py:send_request_defer():622] handle sender defer: 13
+2023-05-07 12:14:03,477 INFO    SenderThread:516709 [sender.py:transition_state():626] send defer: 14
+2023-05-07 12:14:03,478 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: defer
+2023-05-07 12:14:03,478 INFO    HandlerThread:516709 [handler.py:handle_request_defer():170] handle defer: 14
+2023-05-07 12:14:03,478 DEBUG   SenderThread:516709 [sender.py:send():375] send: final
+2023-05-07 12:14:03,479 DEBUG   SenderThread:516709 [sender.py:send():375] send: footer
+2023-05-07 12:14:03,479 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: defer
+2023-05-07 12:14:03,479 INFO    SenderThread:516709 [sender.py:send_request_defer():622] handle sender defer: 14
+2023-05-07 12:14:03,480 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-07 12:14:03,480 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: poll_exit
+2023-05-07 12:14:03,481 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: server_info
+2023-05-07 12:14:03,482 DEBUG   SenderThread:516709 [sender.py:send_request():402] send_request: server_info
+2023-05-07 12:14:03,485 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: get_summary
+2023-05-07 12:14:03,486 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: sampled_history
+2023-05-07 12:14:03,803 INFO    MainThread:516709 [wandb_run.py:_footer_history_summary_info():3476] rendering history
+2023-05-07 12:14:03,803 INFO    MainThread:516709 [wandb_run.py:_footer_history_summary_info():3508] rendering summary
+2023-05-07 12:14:03,803 INFO    MainThread:516709 [wandb_run.py:_footer_sync_info():3434] logging synced files
+2023-05-07 12:14:03,804 DEBUG   HandlerThread:516709 [handler.py:handle_request():144] handle_request: shutdown
+2023-05-07 12:14:03,804 INFO    HandlerThread:516709 [handler.py:finish():845] shutting down handler
+2023-05-07 12:14:04,482 INFO    WriterThread:516709 [datastore.py:close():298] close: /DATATWO/users/mincut/Object-Centric-VideoAnswering/TemporalGNN/wandb/run-20230507_121353-g5vp8arz/run-g5vp8arz.wandb
+2023-05-07 12:14:04,803 INFO    SenderThread:516709 [sender.py:finish():1550] shutting down sender
+2023-05-07 12:14:04,803 INFO    SenderThread:516709 [file_pusher.py:finish():168] shutting down file pusher
+2023-05-07 12:14:04,803 INFO    SenderThread:516709 [file_pusher.py:join():173] waiting for file pusher
