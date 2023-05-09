@@ -57,5 +57,5 @@ This repository contains code for processing the Clevrer video dataset and train
      ```
 
 
-Please refer to the code for implementation details and `report.pdf` for architecture and modelling details.
+Please refer to the code for implementation details and `Report.pdf` for architecture and modelling details.
 
