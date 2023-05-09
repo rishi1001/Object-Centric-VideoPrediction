@@ -27,10 +27,10 @@ from sg2im.layers import build_mlp
 
 
 class Sg2ImModel(nn.Module):
-	def __init__(self, vocab, image_size=(64, 64), embedding_dim=64,
+	def __init__(self,image_size=(224, 224), embedding_dim=1004,
 							 gconv_dim=128, gconv_hidden_dim=512,
 							 gconv_pooling='avg', gconv_num_layers=5,
-							 refinement_dims=(1024, 512, 256, 128, 64),
+							 refinement_dims=(1024, 512, 256, 256, 224),
 							 normalization='batch', activation='leakyrelu-0.2',
 							 mask_size=None, mlp_normalization='none', layout_noise_dim=0,
 							 **kwargs):
@@ -41,14 +41,14 @@ class Sg2ImModel(nn.Module):
 		if len(kwargs) > 0:
 			print('WARNING: Model got unexpected kwargs ', kwargs)
 
-		self.vocab = vocab
+		# self.vocab = vocab
 		self.image_size = image_size
 		self.layout_noise_dim = layout_noise_dim
 
-		num_objs = len(vocab['object_idx_to_name'])
-		num_preds = len(vocab['pred_idx_to_name'])
-		self.obj_embeddings = nn.Embedding(num_objs + 1, embedding_dim)
-		self.pred_embeddings = nn.Embedding(num_preds, embedding_dim)
+		# num_objs = len(vocab['object_idx_to_name'])
+		# num_preds = len(vocab['pred_idx_to_name'])
+		# self.obj_embeddings = nn.Embedding(num_objs + 1, embedding_dim)
+		# self.pred_embeddings = nn.Embedding(num_preds, embedding_dim)
 
 		if gconv_num_layers == 0:
 			self.gconv = nn.Linear(embedding_dim, gconv_dim)
@@ -81,7 +81,7 @@ class Sg2ImModel(nn.Module):
 		if mask_size is not None and mask_size > 0:
 			self.mask_net = self._build_mask_net(num_objs, gconv_dim, mask_size)
 
-		rel_aux_layers = [2 * embedding_dim + 8, gconv_hidden_dim, num_preds]
+		rel_aux_layers = [2 * embedding_dim + 8, gconv_hidden_dim, 64]
 		self.rel_aux_net = build_mlp(rel_aux_layers, batch_norm=mlp_normalization)
 
 		refinement_kwargs = {
@@ -91,14 +91,14 @@ class Sg2ImModel(nn.Module):
 		}
 		self.refinement_net = RefinementNetwork(**refinement_kwargs)
 
-        #VIDGNN
-        self.edge_embedding = nn.Sequential(
-            nn.Linear(embedding_dim,embedding_dim),
-            nn.ReLU(),
-            nn.Linear(embedding_dim,embedding_dim),
-            nn.ReLU(),
-            nn.Linear(embedding_dim,embedding_dim)
-        )
+		#VIDGNN
+		self.edge_embedding = nn.Sequential(
+			nn.Linear(8,256),
+			nn.ReLU(),
+			nn.Linear(256,256),
+			nn.ReLU(),
+			nn.Linear(256,1004)
+		)
 
 
 	def _build_mask_net(self, num_objs, dim, mask_size):
@@ -118,24 +118,28 @@ class Sg2ImModel(nn.Module):
 	
 	def get_edge_info(self,obj_vecs,obj_to_img):
 		#assume fully connected graphs
-        edges = []
-        in_ = []
-        for i in range(obj_vecs.size()):
-            for j in range(obj_vecs.size()):
-                if i!=j and obj_to_img[i] == obj_to_img[j]:
-                    edges.append([i,j])
-                    in_.append(torch.cat([obj_vecs[u],obj_vecs[v]]))
-                    
-		edges = torch.tensor(edges).to(obj_vecs.device)
-        in_ = torch.stack(in_)
-        edge_vecs = self.edge_embedding(in_)
+		edges = []
+		in_ = []
+		s = []
+		o = []
+		for i in range(obj_vecs.size(0)):
+			for j in range(obj_vecs.size(0)):
+				if i!=j and obj_to_img[i] == obj_to_img[j]:
+					s.append(i)
+					o.append(j)
+					edges.append([i,j])
+					in_.append(torch.cat([obj_vecs[i][-4:],obj_vecs[i][-4:]]))
+					
+		edges = torch.tensor(edges).to(obj_vecs.device).long()
+		in_ = torch.stack(in_)
+		edge_vecs = self.edge_embedding(in_)
 
-        return edge,edge_vecs 
+		return edges,edge_vecs,o,s
 
 	def forward(self,obj_vecs,obj_to_img):
 		
-		edge_vecs,edges =  self.get_edge_info(obj_vecs)
-
+		edges,pred_vecs,o,s =  self.get_edge_info(obj_vecs,obj_to_img)
+		obj_vecs_orig = obj_vecs 
 		if isinstance(self.gconv, nn.Linear):
 			obj_vecs = self.gconv(obj_vecs)
 		else:
@@ -146,159 +150,11 @@ class Sg2ImModel(nn.Module):
 		
 		boxes_pred = self.box_net(obj_vecs)
 
-		masks_pred = None
-		if self.mask_net is not None:
-			mask_scores = self.mask_net(obj_vecs.view(O, -1, 1, 1))
-			masks_pred = mask_scores.squeeze(1).sigmoid()
-
-		s_boxes, o_boxes = boxes_pred[s], boxes_pred[o]
-		s_vecs, o_vecs = obj_vecs_orig[s], obj_vecs_orig[o]
-		rel_aux_input = torch.cat([s_boxes, o_boxes, s_vecs, o_vecs], dim=1)
-		rel_scores = self.rel_aux_net(rel_aux_input)
 
 		H, W = self.image_size
-		layout_boxes = boxes_pred if boxes_gt is None else boxes_gt
- 
-		if masks_pred is None:
-			layout = boxes_to_layout(obj_vecs, layout_boxes, obj_to_img, H, W)
-		else:
-			layout_masks = masks_pred 
-			layout = masks_to_layout(obj_vecs, layout_boxes, layout_masks,
-															 obj_to_img, H, W)
+		layout_boxes = boxes_pred # if boxes_gt is None else boxes_gt
 
-		if self.layout_noise_dim > 0:
-			N, C, H, W = layout.size()
-			noise_shape = (N, self.layout_noise_dim, H, W)
-			layout_noise = torch.randn(noise_shape, dtype=layout.dtype,
-																 device=layout.device)
-			layout = torch.cat([layout, layout_noise], dim=1)
-		img = self.refinement_net(layout)
+		layout = boxes_to_layout(obj_vecs, layout_boxes, obj_to_img, H, W)
 		
-		return img, boxes_pred, masks_pred, rel_scores
-	
-	def forward_1(self, objs, triples, obj_to_img=None,
-							boxes_gt=None, masks_gt=None):
-		"""
-		Required Inputs:
-		- objs: LongTensor of shape (O,) giving categories for all objects
-		- triples: LongTensor of shape (T, 3) where triples[t] = [s, p, o]
-			means that there is a triple (objs[s], p, objs[o])
-
-		Optional Inputs:
-		- obj_to_img: LongTensor of shape (O,) where obj_to_img[o] = i
-			means that objects[o] is an object in image i. If not given then
-			all objects are assumed to belong to the same image.
-		- boxes_gt: FloatTensor of shape (O, 4) giving boxes to use for computing
-			the spatial layout; if not given then use predicted boxes.
-		"""
-		O, T = objs.size(0), triples.size(0)
-		s, p, o = triples.chunk(3, dim=1)           # All have shape (T, 1)
-		s, p, o = [x.squeeze(1) for x in [s, p, o]] # Now have shape (T,)
-		edges = torch.stack([s, o], dim=1)          # Shape is (T, 2)
-	
-		if obj_to_img is None:
-			obj_to_img = torch.zeros(O, dtype=objs.dtype, device=objs.device)
-
-		obj_vecs = self.obj_embeddings(objs)
-		obj_vecs_orig = obj_vecs
-		# pred_vecs = self.pred_embeddings(p)
-
-		if isinstance(self.gconv, nn.Linear):
-			obj_vecs = self.gconv(obj_vecs)
-		else:
-			obj_vecs, pred_vecs = self.gconv(obj_vecs, pred_vecs, edges)
-		if self.gconv_net is not None:
-			obj_vecs, pred_vecs = self.gconv_net(obj_vecs, pred_vecs, edges)
-
-		boxes_pred = self.box_net(obj_vecs)
-
-		masks_pred = None
-		if self.mask_net is not None:
-			mask_scores = self.mask_net(obj_vecs.view(O, -1, 1, 1))
-			masks_pred = mask_scores.squeeze(1).sigmoid()
-
-		s_boxes, o_boxes = boxes_pred[s], boxes_pred[o]
-		s_vecs, o_vecs = obj_vecs_orig[s], obj_vecs_orig[o]
-		rel_aux_input = torch.cat([s_boxes, o_boxes, s_vecs, o_vecs], dim=1)
-		rel_scores = self.rel_aux_net(rel_aux_input)
-
-		H, W = self.image_size
-		layout_boxes = boxes_pred if boxes_gt is None else boxes_gt
- 
-		if masks_pred is None:
-			layout = boxes_to_layout(obj_vecs, layout_boxes, obj_to_img, H, W)
-		else:
-			layout_masks = masks_pred if masks_gt is None else masks_gt
-			layout = masks_to_layout(obj_vecs, layout_boxes, layout_masks,
-															 obj_to_img, H, W)
-
-		if self.layout_noise_dim > 0:
-			N, C, H, W = layout.size()
-			noise_shape = (N, self.layout_noise_dim, H, W)
-			layout_noise = torch.randn(noise_shape, dtype=layout.dtype,
-																 device=layout.device)
-			layout = torch.cat([layout, layout_noise], dim=1)
 		img = self.refinement_net(layout)
-		return img, boxes_pred, masks_pred, rel_scores
-
-	def encode_scene_graphs(self, scene_graphs):
-		"""
-		Encode one or more scene graphs using this model's vocabulary. Inputs to
-		this method are scene graphs represented as dictionaries like the following:
-
-		{
-			"objects": ["cat", "dog", "sky"],
-			"relationships": [
-				[0, "next to", 1],
-				[0, "beneath", 2],
-				[2, "above", 1],
-			]
-		}
-
-		This scene graph has three relationshps: cat next to dog, cat beneath sky,
-		and sky above dog.
-
-		Inputs:
-		- scene_graphs: A dictionary giving a single scene graph, or a list of
-			dictionaries giving a sequence of scene graphs.
-
-		Returns a tuple of LongTensors (objs, triples, obj_to_img) that have the
-		same semantics as self.forward. The returned LongTensors will be on the
-		same device as the model parameters.
-		"""
-		if isinstance(scene_graphs, dict):
-			# We just got a single scene graph, so promote it to a list
-			scene_graphs = [scene_graphs]
-
-		objs, triples, obj_to_img = [], [], []
-		obj_offset = 0
-		for i, sg in enumerate(scene_graphs):
-			# Insert dummy __image__ object and __in_image__ relationships
-			sg['objects'].append('__image__')
-			image_idx = len(sg['objects']) - 1
-			for j in range(image_idx):
-				sg['relationships'].append([j, '__in_image__', image_idx])
-
-			for obj in sg['objects']:
-				obj_idx = self.vocab['object_name_to_idx'].get(obj, None)
-				if obj_idx is None:
-					raise ValueError('Object "%s" not in vocab' % obj)
-				objs.append(obj_idx)
-				obj_to_img.append(i)
-			for s, p, o in sg['relationships']:
-				pred_idx = self.vocab['pred_name_to_idx'].get(p, None)
-				if pred_idx is None:
-					raise ValueError('Relationship "%s" not in vocab' % p)
-				triples.append([s + obj_offset, pred_idx, o + obj_offset])
-			obj_offset += len(sg['objects'])
-		device = next(self.parameters()).device
-		objs = torch.tensor(objs, dtype=torch.int64, device=device)
-		triples = torch.tensor(triples, dtype=torch.int64, device=device)
-		obj_to_img = torch.tensor(obj_to_img, dtype=torch.int64, device=device)
-		return objs, triples, obj_to_img
-
-	def forward_json(self, scene_graphs):
-		""" Convenience method that combines encode_scene_graphs and forward. """
-		objs, triples, obj_to_img = self.encode_scene_graphs(scene_graphs)
-		return self.forward(objs, triples, obj_to_img)
-
+		return img, boxes_pred

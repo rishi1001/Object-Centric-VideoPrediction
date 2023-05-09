@@ -88,6 +88,7 @@ def masks_to_layout(vecs, boxes, masks, obj_to_img, H, W=None, pooling='sum'):
   sampled = F.grid_sample(img_in, grid)
 
   out = _pool_samples(sampled, obj_to_img, pooling=pooling)
+
   return out
 
 
@@ -108,8 +109,8 @@ def _boxes_to_grid(boxes, H, W):
   # All these are (O, 1, 1)
   x0, y0 = boxes[:, 0], boxes[:, 1]
   x1, y1 = boxes[:, 2], boxes[:, 3]
-  ww = x1 - x0
-  hh = y1 - y0
+  ww = x1 - x0 + 0.0001
+  hh = y1 - y0 + 0.0001
 
   X = torch.linspace(0, 1, steps=W).view(1, 1, W).to(boxes)
   Y = torch.linspace(0, 1, steps=H).view(1, H, 1).to(boxes)

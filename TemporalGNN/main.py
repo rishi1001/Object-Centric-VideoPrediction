@@ -27,13 +27,13 @@ set_seed()
 
 
 ## device setting
-gpu=0
+gpu=1
 device = torch.device(f'cuda:{gpu}' if torch.cuda.is_available() else 'cpu')
 print(device)
 ### model-parameters
 hidden_layers=16
-lr=0.005        # TODO varying this
-weight_decay=5e-4
+lr=5e-5        # TODO varying this
+weight_decay=5e-6
 normalize=False     # just keep it False always
 
 #dataset_X = "../a3_datasets/d2_small_X.csv"
@@ -42,11 +42,11 @@ normalize=False     # just keep it False always
 #graph_name = "d2"
 
 num_timestamps_in = 6
-num_timestamps_out = 3
+num_timestamps_out = 2
 num_features=4
 
 
-num_epochs=100
+num_epochs=500
 batch_size = 1
 model_name = "A3TGCN"
 

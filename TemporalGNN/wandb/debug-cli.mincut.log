@@ -1,0 +1,6 @@
+2023-05-07 16:58:17 ERROR dropped chunk HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/rishishah/vidgnn/5nlb2pzd/file_stream (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 302 Moved Temporarily')))
+NoneType: None
+2023-05-07 19:12:14 ERROR dropped chunk HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/rishishah/vidgnn/5nlb2pzd/file_stream (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 302 Moved Temporarily')))
+NoneType: None
+2023-05-07 21:24:51 ERROR dropped chunk HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/rishishah/vidgnn/5nlb2pzd/file_stream (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 302 Moved Temporarily')))
+NoneType: None

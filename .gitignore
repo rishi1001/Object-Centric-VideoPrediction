@@ -2,3 +2,6 @@ data
 *.yaml
 .ipynb_checkpoints/
 *.mp4
+decoder_models
+TemporalGNN/wandb
+TemporalGNN/models

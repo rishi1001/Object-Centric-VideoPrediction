@@ -172,10 +172,9 @@ def generateFeatures(model,mask_generator, device, transform, data_path, save_pa
     prev_num_objects = -1
     file_names = sorted(os.listdir(data_path), key=get_numeric_value)
     for frame_file in tqdm(file_names):
-        # data_path = '/DATATWO/users/mincut/Object-Centric-VideoAnswering/data/extracted_frames/train/00000'
-        # frame_file = 'frame36.jpg'
+        # data_path = '/DATATWO/users/mincut/Object-Centric-VideoAnswering/data/extracted_frames/train/00001'
+        # frame_file = 'frame10.jpg'
         print("Processing frame: ",data_path, frame_file)
-        mapping_srl_actual[f"{data_path.split('/')[-1]}_{frame_file}"]=serial_num
         img = cv2.imread(os.path.join(data_path, frame_file))
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         bbox, point_coords, segmentations = getMask(mask_generator, img)
@@ -185,8 +184,10 @@ def generateFeatures(model,mask_generator, device, transform, data_path, save_pa
         img_shape = img.shape
         # breakpoint()
         print("Number of objects: ", num_objects)
+        if num_objects!=0:
+            mapping_srl_actual[f"{data_path.split('/')[-1]}_{frame_file}"]=serial_num
         print("Point coords: ", point_coords)
-        if (prev_num_objects != -1 and prev_num_objects != num_objects) or num_objects==0:
+        if (prev_num_objects != -1 and prev_num_objects!=0 and prev_num_objects != num_objects):
             # save data point
             print("Saving data point")
             np.save(os.path.join(save_path, str(serial_num)), feature)
@@ -194,11 +195,17 @@ def generateFeatures(model,mask_generator, device, transform, data_path, save_pa
             feature = np.empty((0,0))
             resnet_feature = np.empty((0,0))
             serial_num += 1
+            if num_objects!=0:
+                mapping_srl_actual[f"{data_path.split('/')[-1]}_{frame_file}"]=serial_num
             prev_point_coords = None
             prev_bbox = None
             prev_features_resnet = None
         
         if num_objects==0:
+            prev_num_objects = num_objects
+            prev_point_coords = None
+            prev_bbox = None
+            prev_features_resnet = None
             continue
 
         bbox, point_coords, features_resnet = matchPointCoords(prev_point_coords, prev_bbox, prev_features_resnet, point_coords, bbox, features_resnet)
@@ -236,16 +243,16 @@ def generateFeatures(model,mask_generator, device, transform, data_path, save_pa
 if __name__ == '__main__':
 
     root='/DATATWO/users/mincut/Object-Centric-VideoAnswering/data'
-    mode='train'
+    mode='test'
 
 
     folder = os.path.join(root,'extracted_frames',mode)
 
-    save_folder = os.path.join(root,'features_dummy',mode)
+    save_folder = os.path.join(root,'features_new',mode)
     if not os.path.exists(save_folder):
         os.makedirs(save_folder)
 
-    save_folder_resnet = os.path.join(root,'features_resnet_dummy',mode)
+    save_folder_resnet = os.path.join(root,'features_resnet_new',mode)
     if not os.path.exists(save_folder_resnet):
         os.makedirs(save_folder_resnet)
 
@@ -255,7 +262,7 @@ if __name__ == '__main__':
     # Load the pre-trained ResNet model
     model = torchvision.models.resnet18(pretrained=True)
     model.eval()
-    gpu=0
+    gpu=3
     device = torch.device(f"cuda:{gpu}" if torch.cuda.is_available() else "cpu")
     model.to(device)
 
@@ -280,14 +287,14 @@ if __name__ == '__main__':
         print("Processing video: ", videos)
         data_path = os.path.join(folder, videos)
         generateFeatures(model,mask_generator, device, transform, data_path, save_folder, save_folder_resnet)
-        if serial_num>100:
+        if serial_num>3000:
             break
 
     # save meta info in json
     with open(os.path.join(save_folder, 'meta_info.json'), 'w') as f:
         json.dump(meta_info, f)
     
-    with open(os.path.join(save_folder, 'mapping_dummy.json'), 'w') as f:
+    with open(os.path.join(save_folder, 'mapping.json'), 'w') as f:
         json.dump(mapping_srl_actual, f)
 
     

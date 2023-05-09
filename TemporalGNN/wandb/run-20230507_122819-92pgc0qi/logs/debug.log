@@ -24,3 +24,4 @@ config: {'lr': 0.005, 'weight_decay': 0.0005, 'hidden_layers': 16, 'normalize': 
 2023-05-07 12:28:24,024 INFO    MainThread:530377 [wandb_run.py:_redirect():2077] Wrapping output streams.
 2023-05-07 12:28:24,024 INFO    MainThread:530377 [wandb_run.py:_redirect():2102] Redirects installed.
 2023-05-07 12:28:24,025 INFO    MainThread:530377 [wandb_init.py:init():824] run started, returning control to user process
+2023-05-08 16:22:17,352 WARNING MsgRouterThr:530377 [router.py:message_loop():77] message_loop has been closed
