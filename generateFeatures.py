@@ -94,7 +94,9 @@ def getFeaturesResnet(img, segmentations, model, device, transform):
     # img = Image.fromarray(img)
     # img = transform(img)
     features = []
+    masks = []
     for i,mask in enumerate(segmentations):
+        masks.append(mask)
         mask = mask[:, :, np.newaxis].astype(np.uint8)
         # mask = np.repeat(mask, 3, axis=2)
         # mask = Image.fromarray(mask)
@@ -113,16 +115,17 @@ def getFeaturesResnet(img, segmentations, model, device, transform):
         feature = feature.detach().cpu().numpy()
         features.append(feature)
     # breakpoint()
-    return features
+    return features, masks
 
-def matchPointCoords(prev_point_coords, prev_bbox, prev_features_resnet, point_coords, bbox, features_resnet):
+def matchPointCoords(prev_point_coords, prev_bbox, prev_features_resnet, point_coords, bbox, features_resnet, masks):
     if prev_point_coords is None:
-        return np.array(bbox), np.array(point_coords), np.array(features_resnet)
+        return np.array(bbox), np.array(point_coords), np.array(features_resnet), np.array(masks)
     bbox = np.array(bbox)
     prev_bbox = np.array(prev_bbox)
     point_coords = np.array(point_coords)
     prev_point_coords = np.array(prev_point_coords)
     features_resnet = np.array(features_resnet)
+    masks = np.array(masks)
 
     dists = np.zeros((len(bbox), len(prev_bbox)))
     for i in range(len(bbox)):
@@ -152,13 +155,14 @@ def matchPointCoords(prev_point_coords, prev_bbox, prev_features_resnet, point_c
     point_coords = point_coords[col_ind]
     bbox = bbox[col_ind]
     features_resnet = features_resnet[col_ind]
+    masks = masks[col_ind]
     
-    return bbox, point_coords, features_resnet
+    return bbox, point_coords, features_resnet, masks
 
 def get_numeric_value(file_name):
     return int(file_name.split('.')[0].split('frame')[1])
 
-def generateFeatures(model,mask_generator, device, transform, data_path, save_path, save_path_resnet):
+def generateFeatures(model,mask_generator, device, transform, data_path, save_path, save_path_resnet,save_path_masks):
     global serial_num
     if not os.path.exists(save_path):
         os.mkdir(save_path)
@@ -166,9 +170,11 @@ def generateFeatures(model,mask_generator, device, transform, data_path, save_pa
         os.mkdir(save_path_resnet)
     feature = np.empty((0,0))
     resnet_feature = np.empty((0,0))
+    masks = np.empty((0,0,0))
     prev_point_coords = None
     prev_bbox = None
     prev_features_resnet = None
+    prev_masks = None
     prev_num_objects = -1
     file_names = sorted(os.listdir(data_path), key=get_numeric_value)
     for frame_file in tqdm(file_names):
@@ -178,7 +184,7 @@ def generateFeatures(model,mask_generator, device, transform, data_path, save_pa
         img = cv2.imread(os.path.join(data_path, frame_file))
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         bbox, point_coords, segmentations = getMask(mask_generator, img)
-        features_resnet = getFeaturesResnet(img,segmentations,model,device,transform)
+        features_resnet, feat_masks = getFeaturesResnet(img,segmentations,model,device,transform)
         num_objects = len(bbox)
         meta_info.append([frame_file, num_objects])
         img_shape = img.shape
@@ -192,23 +198,28 @@ def generateFeatures(model,mask_generator, device, transform, data_path, save_pa
             print("Saving data point")
             np.save(os.path.join(save_path, str(serial_num)), feature)
             np.save(os.path.join(save_path_resnet, str(serial_num)), resnet_feature)
+            np.save(os.path.join(save_path_masks, str(serial_num)), masks)
             feature = np.empty((0,0))
             resnet_feature = np.empty((0,0))
+            masks = np.empty((0,0,0))
             serial_num += 1
             if num_objects!=0:
                 mapping_srl_actual[f"{data_path.split('/')[-1]}_{frame_file}"]=serial_num
             prev_point_coords = None
             prev_bbox = None
             prev_features_resnet = None
+            prev_masks = None
+
         
         if num_objects==0:
             prev_num_objects = num_objects
             prev_point_coords = None
             prev_bbox = None
             prev_features_resnet = None
+            prev_masks = None
             continue
 
-        bbox, point_coords, features_resnet = matchPointCoords(prev_point_coords, prev_bbox, prev_features_resnet, point_coords, bbox, features_resnet)
+        bbox, point_coords, features_resnet, feat_masks = matchPointCoords(prev_point_coords, prev_bbox, prev_features_resnet, point_coords, bbox, features_resnet, feat_masks)
         # breakpoint()
         positionFeature = bbox.copy().astype(float)
 
@@ -223,20 +234,25 @@ def generateFeatures(model,mask_generator, device, transform, data_path, save_pa
         if feature.shape[0] == 0:
             feature = positionFeature
             resnet_feature = features_resnet.copy()
+            masks = feat_masks.copy()
+
         else:
             feature = np.concatenate((feature, positionFeature), axis=1)
             resnet_feature = np.concatenate((resnet_feature, features_resnet.copy()), axis=1)
+            masks = np.concatenate((masks, feat_masks.copy()), axis=1)
 
         prev_num_objects = num_objects
         prev_point_coords = point_coords
         prev_bbox = bbox
         prev_features_resnet = features_resnet
+        prev_masks = feat_masks
     
     # TODO check the data path where saving
     if feature.shape[0] != 0:
         print("Saving data point")
         np.save(os.path.join(save_path, str(serial_num)), feature)
         np.save(os.path.join(save_path_resnet, str(serial_num)), resnet_feature)
+        np.save(os.path.join(save_path_masks, str(serial_num)), masks)
         serial_num += 1
     
         
@@ -244,17 +260,22 @@ if __name__ == '__main__':
 
     root='/DATATWO/users/mincut/Object-Centric-VideoAnswering/data'
     mode='test'
+    
 
 
     folder = os.path.join(root,'extracted_frames',mode)
 
-    save_folder = os.path.join(root,'features_new',mode)
+    save_folder = os.path.join(root,'features',mode)
     if not os.path.exists(save_folder):
         os.makedirs(save_folder)
 
-    save_folder_resnet = os.path.join(root,'features_resnet_new',mode)
+    save_folder_resnet = os.path.join(root,'features_resnet',mode)
     if not os.path.exists(save_folder_resnet):
         os.makedirs(save_folder_resnet)
+
+    save_folder_masks = os.path.join(root,'features_mask',mode)
+    if not os.path.exists(save_folder_masks):
+        os.makedirs(save_folder_masks)
 
 
     # load model
@@ -262,7 +283,7 @@ if __name__ == '__main__':
     # Load the pre-trained ResNet model
     model = torchvision.models.resnet18(pretrained=True)
     model.eval()
-    gpu=3
+    gpu=0
     device = torch.device(f"cuda:{gpu}" if torch.cuda.is_available() else "cpu")
     model.to(device)
 
@@ -286,8 +307,8 @@ if __name__ == '__main__':
     for videos in tqdm(sorted(os.listdir(folder))):
         print("Processing video: ", videos)
         data_path = os.path.join(folder, videos)
-        generateFeatures(model,mask_generator, device, transform, data_path, save_folder, save_folder_resnet)
-        if serial_num>3000:
+        generateFeatures(model,mask_generator, device, transform, data_path, save_folder, save_folder_resnet,save_folder_masks)
+        if serial_num>500:
             break
 
     # save meta info in json

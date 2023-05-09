@@ -25,9 +25,9 @@ def set_seed(seed: int = 1) -> None:
 
 set_seed()
 
-
+wandb_save=True
 ## device setting
-gpu=1
+gpu=2
 device = torch.device(f'cuda:{gpu}' if torch.cuda.is_available() else 'cpu')
 print(device)
 ### model-parameters
@@ -46,15 +46,15 @@ num_timestamps_out = 2
 num_features=4
 
 
-num_epochs=500
+num_epochs=30
 batch_size = 1
 model_name = "A3TGCN"
 
 folder_name = f"{model_name}_{num_timestamps_in}_{num_timestamps_out}"
 model_save = folder_name
 
-
-wandb.init(project="vidgnn", name=folder_name,config={"lr":lr,"weight_decay":weight_decay,"hidden_layers":hidden_layers,"normalize":normalize,"num_timestamps_in":num_timestamps_in,"num_timestamps_out":num_timestamps_out,"batch_size":batch_size,"num_epochs":num_epochs},entity='rishishah')
+if wandb_save:
+    wandb.init(project="vidgnn", name=folder_name,config={"lr":lr,"weight_decay":weight_decay,"hidden_layers":hidden_layers,"normalize":normalize,"num_timestamps_in":num_timestamps_in,"num_timestamps_out":num_timestamps_out,"batch_size":batch_size,"num_epochs":num_epochs},entity='rishishah')
 
 folder_name = "Results/" + folder_name
 
@@ -96,6 +96,7 @@ def train(epoch,plot=False):
     for data in tqdm(dataloader_train):
         optimizer.zero_grad()  # Clear gradients.
         #print(data.features)
+        # breakpoint()
         data.x = data.x.to(device)
         data.edge_index = data.edge_index.to(device)
         data.y = data.y.double().to(device)
@@ -110,7 +111,8 @@ def train(epoch,plot=False):
         running_loss += loss.item()
         # if i==100:
         #     break
-    wandb.log({"train_loss":running_loss /(len(dataloader_train))})
+    if wandb_save:
+        wandb.log({"train_loss":running_loss /(len(dataloader_train))})
     print('epoch %d training loss: %.3f' % (epoch + 1, running_loss /(len(dataloader_train))))
     if plot:
         train_loss.append(running_loss /(len(dataloader_train)))
@@ -142,21 +144,27 @@ def test(test=False,plot=False,dataloader=None):         # test=True for test se
             running_loss += loss.item()
 
         print('epoch %d Test/Val loss: %.3f' % (epoch + 1, running_loss / (len(dataloader))))
-        wandb.log({"val_loss":running_loss /(len(dataloader))})
-        
+        if wandb_save:
+            wandb.log({"val_loss":running_loss /(len(dataloader))})
 
-        if (epoch%20==0 and not test and plot):
+        if ((epoch%10==0 or epoch==29) and not test and plot):
             x=[i for i in range(len(out0))]
-            plt.plot(x,out0[:,0].cpu(),label="Pred-x")
-            plt.plot(x,y0[:,0].cpu(),label="Actual-x")    
-            plt.draw()
+            plt.plot(x,out0[:,0,0].cpu(),label="Pred-x")
+            plt.plot(x,y0[:,0,0].cpu(),label="Actual-x") 
             plt.legend()
+            plt.title("Objects vs X-Coordinate")
+            plt.xlabel("Object ID")
+            plt.ylabel("X-Coordinate")
             plt.savefig(f"{folder_name}/{epoch}_x.png")
             plt.clf()
-            plt.plot(x,out0[:,1].cpu(),label="Pred-y")
-            plt.plot(x,y0[:,1].cpu(),label="Actual-y")    
+            plt.plot(x,out0[:,1,0].cpu(),label="Pred-y")
+            plt.plot(x,y0[:,1,0].cpu(),label="Actual-y")    
             plt.draw()
             plt.legend()
+            plt.legend()
+            plt.title("Objects vs Y-Coordinate")
+            plt.xlabel("Object ID")
+            plt.ylabel("Y-Coordinate")
             plt.savefig(f"{folder_name}/{epoch}_y.png")
             plt.clf()
         if (not test):
@@ -169,7 +177,7 @@ def test(test=False,plot=False,dataloader=None):         # test=True for test se
     if test==False and (best_loss==-1 or running_loss < best_loss):
         best_loss=running_loss
         # Saving our trained model
-        torch.save(model.state_dict(), f'models/{model_save}.pt')
+        torch.save(model.state_dict(), f'models/{model_save}.pt')     # TODO change this
 
 if __name__ == '__main__':
     print('Start Training')

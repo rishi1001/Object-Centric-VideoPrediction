@@ -5,3 +5,6 @@ data
 decoder_models
 TemporalGNN/wandb
 TemporalGNN/models
+wandb
+Results
+decoder_models_new

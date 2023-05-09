@@ -94,23 +94,49 @@ def get_dataloader(batch_size = 16,mode='train'):
     dataset = DecodingDataset(mode)
     return DataLoader(dataset,batch_size=batch_size,shuffle=True,collate_fn=collate_fn)
 
-
-
-def train_decoder(model,dataloader):
-
-    mask_transform =transforms.Compose([
-    transforms.Resize((256, 256)),
-    transforms.ToTensor(),
+counter = 0
+def write_img(predicted_image_tensor,original_img_tensor,batch_size=16):
+    global counter
+    folder_name = f"Results/exp{2}"
+    os.makedirs(folder_name,exist_ok=True)
+    # reverse_normalize = transforms.Normalize(
+    #         mean=[-0.485 / 0.229, -0.456 / 0.224, -0.406 / 0.225],
+    #         std=[1 / 0.229, 1 / 0.224, 1 / 0.225]
+    #     )
+    reverse_normalize = transforms.Compose([
+        transforms.Normalize(
+            mean=[-0.485 / 0.229, -0.456 / 0.224, -0.406 / 0.225],
+            std=[1 / 0.229, 1 / 0.224, 1 / 0.225]
+        ),
+        transforms.ToPILImage(),
+        transforms.Resize((320, 480))
     ])
-    
-    from torch.optim import Adam 
-    optimizer = Adam(model.parameters(),lr=1e-5)
-    num_epochs = 50
-    for j in range(num_epochs):
-        for i,batch in tqdm(enumerate(iter(dataloader))):
 
-            if i%5 == 0:
-                torch.save(model,f"decoder_models_new/model_{j}.pth")
+    predicted_image = predicted_image_tensor.cpu().detach()  # Move the tensor to CPU if it's on GPU
+    actual_image = original_img_tensor.cpu().detach()
+    for i in range(batch_size):
+        pred_img_i = predicted_image[i]
+        # pred_img_i = transforms.ToPILImage()(pred_img_i)
+        pred_img_i = reverse_normalize(pred_img_i)
+        pred_img_i = np.array(pred_img_i)
+        pred_img_i = cv2.cvtColor(pred_img_i, cv2.COLOR_RGB2BGR)
+        cv2.imwrite(f"{folder_name}/predicted_img_{counter}.jpg", pred_img_i)
+
+        actual_img_i = actual_image[i]
+        # actual_img_i = transforms.ToPILImage()(actual_img_i)
+        actual_img_i = reverse_normalize(actual_img_i)
+        actual_img_i = np.array(actual_img_i)
+        actual_img_i = cv2.cvtColor(actual_img_i, cv2.COLOR_RGB2BGR)
+        cv2.imwrite(f"{folder_name}/actual_img_{counter}.jpg", actual_img_i)
+
+        counter +=1 
+
+def inference_decoder(model,dataloader):
+    global counter
+    model = torch.load(f"decoder_models_new/model_{48}.pth")
+    with torch.no_grad():
+        model.eval()
+        for i,batch in tqdm(enumerate(iter(dataloader))):
             obj_ft = batch["obj_ft"].to(device)
             obj_to_img = batch["obj_to_img"].to(device)
             img_pred,masks_pred,boxes_pred = model(obj_ft,obj_to_img)
@@ -118,6 +144,7 @@ def train_decoder(model,dataloader):
             #check scene-graph-decoder/sg2im/scripts/train.py loss functions for exact way. 
             #: Check for mask size that are output 
             img  = batch["imgs"].to(device)
+            write_img(img_pred,img)
             masks_actual = batch["masks"].to(device)
             if img_pred.isnan().any():
                 print("#####NAN OUTPUT FOUND AND IGNORED!!")
@@ -126,26 +153,21 @@ def train_decoder(model,dataloader):
 
             masks_actual = F_vision.resize(masks_actual, (256, 256), interpolation=torchvision.transforms.InterpolationMode.NEAREST)
             mask_loss = F.binary_cross_entropy(masks_pred, masks_actual.float())
-            loss_bbox = F.mse_loss(boxes_pred, obj_ft[:,-4:]) #new line added 
-            total_loss = l1_pixel_loss + mask_loss + loss_bbox #line modified 
-            wandb.log({'total_loss':total_loss})
-            wandb.log({'l1_pixel_loss':l1_pixel_loss})
-            wandb.log({'l1_mask_loss':mask_loss})
+
+            total_loss = l1_pixel_loss + 0.5*mask_loss
             # mask_loss = F.binary_cross_entropy(masks_pred, masks.float()) get image masks for this 
             print("TRAIN_loss",total_loss)
-            optimizer.zero_grad()
-            total_loss.backward()
-            optimizer.step()
+            if counter>10:
+                break
 
 
 
 def main():
     model = Sg2ImModel().to(device)
     dataloader = get_dataloader()
-    wandb.init(project="vidgnn",name="train_decoder",entity='rishishah')
-    train_decoder(model,dataloader)
+    # wandb.init(project="vidgnn",name="inference_decoder",entity='rishishah')
+    inference_decoder(model,dataloader)
 
-    
 
 if __name__ == '__main__':
     main()

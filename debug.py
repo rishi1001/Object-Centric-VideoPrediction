@@ -12,12 +12,17 @@ for k,v in z.items():
 for v in range(len(freq)):
     z = np.load(f"{ROOT}/features_trial/{mode}/{v}.npy")
     if z.shape[1] != 4*freq[v]:
+        print(v)
+#check mask
+for v in range(len(freq)):
+    z = np.load(f"{ROOT}/features_mask_trial/{mode}/{v}.npy")
+    if z.shape[1] != 320*freq[v]:
         print(v) 
 "####check sizes####"
 
 for v in range(len(freq)):
     
-    z = np.load(f"{ROOT}/features_trial/{mode}/{v}.npy")
+    z = np.load(f"{ROOT}/features_dummy_new/{mode}/{v}.npy")
 
 
 

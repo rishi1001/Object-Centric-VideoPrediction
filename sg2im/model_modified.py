@@ -27,12 +27,12 @@ from sg2im.layers import build_mlp
 
 
 class Sg2ImModel(nn.Module):
-	def __init__(self,image_size=(224, 224), embedding_dim=1004,
+	def __init__(self,image_size=(256, 256), embedding_dim=1004,
 							 gconv_dim=128, gconv_hidden_dim=512,
 							 gconv_pooling='avg', gconv_num_layers=5,
-							 refinement_dims=(1024, 512, 256, 256, 224),
+							 refinement_dims=(1024, 512, 256),
 							 normalization='batch', activation='leakyrelu-0.2',
-							 mask_size=None, mlp_normalization='none', layout_noise_dim=0,
+							 mask_size=256, mlp_normalization='none', layout_noise_dim=0,
 							 **kwargs):
 		super(Sg2ImModel, self).__init__()
 
@@ -45,7 +45,7 @@ class Sg2ImModel(nn.Module):
 		self.image_size = image_size
 		self.layout_noise_dim = layout_noise_dim
 
-		# num_objs = len(vocab['object_idx_to_name'])
+		num_objs = -1			# not used anywhere
 		# num_preds = len(vocab['pred_idx_to_name'])
 		# self.obj_embeddings = nn.Embedding(num_objs + 1, embedding_dim)
 		# self.pred_embeddings = nn.Embedding(num_preds, embedding_dim)
@@ -137,7 +137,7 @@ class Sg2ImModel(nn.Module):
 		return edges,edge_vecs,o,s
 
 	def forward(self,obj_vecs,obj_to_img):
-		
+		O = obj_vecs.size(0)		# TODO check this
 		edges,pred_vecs,o,s =  self.get_edge_info(obj_vecs,obj_to_img)
 		obj_vecs_orig = obj_vecs 
 		if isinstance(self.gconv, nn.Linear):
@@ -149,6 +149,11 @@ class Sg2ImModel(nn.Module):
 			obj_vecs, pred_vecs = self.gconv_net(obj_vecs, pred_vecs, edges)
 		
 		boxes_pred = self.box_net(obj_vecs)
+    	
+		masks_pred = None
+		if self.mask_net is not None:
+			mask_scores = self.mask_net(obj_vecs.view(O, -1, 1, 1))
+			masks_pred = mask_scores.squeeze(1).sigmoid()
 
 
 		H, W = self.image_size
@@ -157,4 +162,4 @@ class Sg2ImModel(nn.Module):
 		layout = boxes_to_layout(obj_vecs, layout_boxes, obj_to_img, H, W)
 		
 		img = self.refinement_net(layout)
-		return img, boxes_pred
+		return img, masks_pred,boxes_pred

@@ -91,7 +91,7 @@ class Sg2ImModel(nn.Module):
     }
     self.refinement_net = RefinementNetwork(**refinement_kwargs)
 
-  def _build_mask_net(self, num_objs, dim, mask_size):
+  def _build_mask_net(self, num_objs ,dim, mask_size):
     output_dim = 1
     layers, cur_size = [], 1
     while cur_size < mask_size:

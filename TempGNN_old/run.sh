@@ -1,1 +1,0 @@
-python main.py ../a3_datasets/d1_X.csv ../a3_datasets/conv_d1_adj_mx.csv ../a3_datasets/d1_graph_splits.npz d1 25 64

@@ -8,6 +8,7 @@ from torch_geometric.utils import dense_to_sparse
 from torch_geometric.data import Data
 from torch_geometric.data import Dataset
 import os
+from sklearn.metrics import pairwise_distances
 
 
 def get_numeric_value(file_name):
@@ -59,7 +60,6 @@ class VideoDataset(Dataset):
             # skip data points that are too short
             if data.shape[1] < self.node_features*(self.num_timesteps_in+self.num_timesteps_out):
                 continue
-            # breakpoint()
             x, y = process_data_point(data,self.num_timesteps_in,self.num_timesteps_out,self.node_features)
             self.tot_points += len(x)
             self.data_points_x.extend(x)
@@ -75,10 +75,30 @@ class VideoDataset(Dataset):
     
     def __getitem__(self, idx):
 
-
         x = self.data_points_x[idx]
         y = self.data_points_y[idx]
         num_nodes = x.shape[0]
+
+        # distances = pairwise_distances(x, metric='euclidean')
+        # threshold = 0.5
+        # edge_indices = np.argwhere(distances < threshold)
+
+
+
+        n = x.shape[0]
+        # Compute pairwise distances between node features
+        distances = np.linalg.norm(x[:, None] - x, axis=-1)
+        # Flatten the distances array
+        flat_distances = distances.flatten()
+        # Sort the distances in ascending order
+        sorted_indices = np.argsort(flat_distances)
+        # Take the top n+nc2
+        tot_edges = n + (n*(n-1))//2
+        top_indices = sorted_indices[:tot_edges]
+        # Convert the flattened indices back to pairs of node indices
+        i, j = np.unravel_index(top_indices, (n, n))
+        # Create an edge index array
+        edge_index = np.stack([i, j])
 
 
         # TODO uncomment this
@@ -86,11 +106,11 @@ class VideoDataset(Dataset):
         #     raise ValueError("num_timesteps_in + num_timesteps_out > num_timesteps_total")
         
         # reshape x -> (num_nodes, num_features, num_timesteps_in)
-        x = np.reshape(x, (num_nodes, self.node_features, self.num_timesteps_in))
+        x = np.reshape(x, (num_nodes, self.node_features, self.num_timesteps_in), order='F')
         # y = all_features[:,num_features*self.num_timesteps_in:num_features*(self.num_timesteps_in+self.num_timesteps_out)]
 
         # reshape y -> (num_nodes,num_features, num_timesteps_out)
-        y = np.reshape(y, (num_nodes,self.node_features, self.num_timesteps_out))
+        y = np.reshape(y, (num_nodes,self.node_features, self.num_timesteps_out),order='F')
 
         x = torch.from_numpy(x).float()
         y = torch.from_numpy(y).float()
@@ -108,11 +128,10 @@ class VideoDataset(Dataset):
         # y = num_features * (y - y_min) / (y_max - y_min+0.01) - 1  
 
         # adj matrix
-        adj = torch.ones((num_nodes, num_nodes))
+        # adj = torch.ones((num_nodes, num_nodes))
         
-
         # edge_index
-        edge_index = torch.nonzero(adj).t().contiguous()        # TODO: check if this is correct
+        edge_index = torch.tensor(edge_index,dtype=torch.long)
 
 
 
